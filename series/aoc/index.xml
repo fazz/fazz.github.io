@@ -6,16 +6,28 @@
     <description>Recent content in aoc on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 07:17:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2020, 2. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020-02/</link>
+      <pubDate>Wed, 02 Dec 2020 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020-02/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/2
+Võimatu missioon: süntaksiharjutusi Tänase ülesande kohta polegi muud öelda, kui et see oli lihtsalt Pythoni süntaksi ja teekide meeldetuletamiseks. Punkte said need, kes kõige varem üles tõusid ja kõige kiiremini trükkisid. Mina nende hulka ei kuulunud, oli vaja magada.
+Lahendus Lahenduskäik tekib ühel päeval siia: https://github.com/fazz/aoc/blob/master/aoc2020/day02.py</description>
+    </item>
+    
     <item>
       <title>AoC 2020, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-01/</link>
       <pubDate>Tue, 01 Dec 2020 07:17:01 +0200</pubDate>
       
       <guid>https://fazz.github.io/posts/aoc2020-01/</guid>
-      <description>Sissejuhatus Esialgu läks pahasti, ei saanud oma sisendit kätte &amp;ndash; 503 Gateway Timeout, aga kuna ma mõisa peale ei võistle, siis las ta olla. Teadaolevalt on ainult ühel eelmisel aastal ühe ülesandega olnud selliseid probleeme, mis nõudsid tolle konkreetse ülesande mittearvestamist.
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/1
+Sissejuhatus Esialgu läks pahasti, ma ei saanud oma sisendit kätte &amp;ndash; 503 Gateway Timeout, aga kuna ma mõisa peale ei võistle, siis las ta olla. Teadaolevalt on ainult ühel eelmisel aastal ühe ülesandega olnud selliseid probleeme, mis nõudsid tolle konkreetse ülesande mittearvestamist.
 EDIT: Because of an outage during the day 1 puzzle unlock, day 1 is worth no points. Naah.
-Vihje Nagu ikka, on esimesed ülesanded soojenduseks, ei midagi komplitseeritut. Ka sisendi suurus oli minu puhul selline, et ei pidanud mõtlema, kas toore jõuga saab lahendada või mitte &amp;ndash; $ 200^3 $ iteratsiooni (teises osas) ei ole liiga palju.</description>
+Vihje Nagu ikka, on esimesed ülesanded soojenduseks, ei midagi komplitseeritut.</description>
     </item>
     
   </channel>
