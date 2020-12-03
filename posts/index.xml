@@ -6,7 +6,18 @@
     <description>Recent content in Posts on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2020, 3. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020-03/</link>
+      <pubDate>Thu, 03 Dec 2020 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020-03/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/3
+Küll on kena kelguga Mulle kohe meeldivad sellised ülesanded, mida saab modulo aritmeetikaga lahendada. Ei teagi miks, amatöörkrüptograafi rõõmud vist.
+Teisalt on see selline ülesanne, mis on meelega sõnastatud hästi keerulisena ja kunst on ära tabada, milles on tegelikult uba. Brace yourselves, kes esimest aastat ülesandeid lahendavad, see läheb iga päevaga aiva hullemaks &amp;ndash; eelmisel aastal oli kaalukeeleks vist 18. päeva ülesanne, kus inimesed jäidki ülesandepüstitusse kinni, selmet vaadata graafi, mille kõrvad sealt tagant välja paistsid.</description>
+    </item>
+    
     <item>
       <title>AoC 2020, 2. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-02/</link>

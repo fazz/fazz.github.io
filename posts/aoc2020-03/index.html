@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.76.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/posts/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2020-03/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Posts | The Happler</title>
+  <title>AoC 2020, 3. päev | The Happler</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/posts/" aria-current="page">
+      <a href="/posts/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -231,68 +231,82 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Posts</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2020, 3. päev
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 3, 2020
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/aoc2020/">aoc2020</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2020/day/3">https://adventofcode.com/2020/day/3</a></p>
+<h2 id="küll-on-kena-kelguga">Küll on kena kelguga</h2>
+<p>Mulle kohe meeldivad sellised ülesanded, mida saab modulo aritmeetikaga lahendada. Ei teagi miks, amatöörkrüptograafi rõõmud vist.</p>
+<p>Teisalt on see selline ülesanne, mis on meelega sõnastatud hästi keerulisena ja kunst on ära tabada, milles on tegelikult uba. <em>Brace yourselves</em>, kes esimest aastat ülesandeid lahendavad, see läheb iga päevaga aiva hullemaks &ndash; eelmisel aastal oli kaalukeeleks vist 18. päeva ülesanne, kus inimesed jäidki ülesandepüstitusse kinni, selmet vaadata graafi, mille kõrvad sealt tagant välja paistsid. Ülesanne taandus suuresti tavaliseks rändkaupmehe probleemiks.</p>
+<h3 id="1-osa">1. osa</h3>
+<p>Juba esimeses osas tõmmatakse lahendajal vaip alt ära: <em>the same pattern repeats to the right many times</em>. On nähtud lahendusi, kus kopeeritakse mänguvälja nii mitu korda kui paremale alla mineva diagonaali mahutamiseks vaja on.</p>
+<p>Korrektne lahendus on palju lihtsam &ndash; mõtle nii, et trajektoor ei lähe mitte järgmisele samakujulisele mänguväljale, vaid „keerdub ümber enda“ ja siseneb väljale uuesti vasakult. Selle väljendamiseks on tuntud matemaaline võte jäägiga arvutamine (või peenemalt „liitmine jäägiklassirühmas“): $$x\leftarrow x + \Delta x\pmod L$$</p>
+<p>($\Delta x$ on ülesandes ette nähtud horisontaalne nihe ja $L$ rea pikkus).</p>
+<p>Selle valemi töötamiseks on vaja küll kasutada andmestruktuurides nullist algavaid indekseid, aga õnneks on see enamustes programmeerimiskeeltes standardkäitumine.</p>
+<p>Näiteks, „üks alla kolm paremale“ näeb illustreeritult välja nii (horisontaalsed positsioonid 0, 3, 6, 9 mod 7 = 2, 4):</p>
+<pre><code>O......
+...X.#.
+..#..#O
+..O.#..
+....#X.
+</code></pre>
+<h3 id="2-osa">2. osa</h3>
+<p>Teine osa on suuresti esimese korduv rakendamine, aga seal üks nurgajuhtum: nimelt on üks võimalikest trajektooridest suunatud allapoole suurema sammuga kui üks rida. See tekitab justkui vajaduse eraldi käsitleda mänguvälja alumisest piirist üleminekut, aga siinkohal tasub hoolikamalt vaadata sisendit: minuteada on kõik võimalikud sisendid paarituarvulise ridade arvuga, mis tähendab, et kahese sammuga astudes lõppeb sõit täpselt alumisel real ja mingit erikäsitlust võrreldes ühese sammuga vaja ei ole ($1 + n\cdot2$ on paaritu).</p>
+<p>Aja peale programmeerides ei ole kõige universaalsema lahenduse otsimine üldse oluline. 😇</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahenduskäik siin: <a href="https://github.com/fazz/aoc/blob/master/aoc2020/day03.py">https://github.com/fazz/aoc/blob/master/aoc2020/day03.py</a></p>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
