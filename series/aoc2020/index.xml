@@ -15,8 +15,21 @@
       <guid>https://fazz.github.io/posts/aoc2020-06/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/6
 Chuck Norris vastas kõik küsimused ära, ka need, mida polnud küsitud Hästi nunnu pisike ülesanne.
-Esimene reaktsioon oli lahendada bitmapi abil, 5. päeva ülesande inertsist, aga ei, see on lihtsalt harjutus hulgateooria põhitõdede kallal (kuigi ka bitmapi abil saab muidugi).
+Esimene reaktsioon oli lahendada bitmapi abil, 5. päeva ülesande inertsist, aga ei, see on hoopis lihtsalt harjutus hulgateooria põhitõdede kallal (kuigi ka bitmapi abil saab muidugi).
 Kui iga rida parsida tähtede kaupa hulgaks, siis igas grupis on esimese poole vastuseks nende hulkade ühisosa elementide arv ja teise poole vastuseks hulkade ühendi elementide arv.</description>
+    </item>
+    
+    <item>
+      <title>AoC 2020, 4. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020-04/</link>
+      <pubDate>Fri, 04 Dec 2020 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020-04/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/4
+Parsi mis Sa parsid, pärast on ikka SEGFAULT Aaaa&amp;hellip; loll ülesanne.
+Mulle ei meeldi selline põlve otsas parserite nikerdamine, võib-olla ka sellepärast, et sisemine turvainsener läheb sellise töö peale kupla.
+Kui mul peaks aega üle jääma, kirjutan selle ülesande lahenduse mõne vettpidava parseri peale, aga pigem ei jää. Aega üle siis.
+Lahendus Lahenduskäik siin: https://github.com/fazz/aoc/blob/master/aoc2020/day04.py</description>
     </item>
     
     <item>
