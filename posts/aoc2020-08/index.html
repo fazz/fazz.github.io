@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.76.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/series/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2020-08/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Series | The Happler</title>
+  <title>AoC 2020, 8. päev | The Happler</title>
 </head>
 
   <body>
@@ -232,33 +232,79 @@
         <div>
           
   <main id="main">
-    <h1>Series</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2020, 8. päev
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/series/aoc/">
+      
+      <strong>Publish date: </strong>Dec 8, 2020
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (6) aoc
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/series/aoc2020/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (6) aoc2020
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="https://fazz.github.io/tags/aoc2020/">aoc2020</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2020/day/8">https://adventofcode.com/2020/day/8</a></p>
+<h2 id="ai-parandab-su-programmi-ise-ära-ja-teeb-veel-pai-ka-ja-puhub-peale">AI parandab Su programmi ise ära ja teeb veel pai ka ja puhub peale</h2>
+<p>Väikeste virtuaalmasinate kirjutamine ei ole kuigi huvitav, kui seda juba paar korda teinud oled, aga ma siiralt loodan, et mõne noore inimese kehutab selline asi assembleris programmeerima. Obskuursed ja salapärased oskused tulevad elus kasuks.</p>
+<p>Esimene osa on lihtne tsüklituvastus - hoia aiva läbitud $pc$-d meeles ja looda, et mälu otsa ei saa (ei ta saa).</p>
+<p>Teise osa kiire ja töötav lahendus on lihtne brute force üle kõigi nende instruktsioonide, mis esimese osa jooksul läbi käidi &ndash; mitte üle kõigi instruktsioonide, nagu seninähtud lahendused on olnud.</p>
+<p>Küll aga pakuvad sellised ülesanded pärastiseks nuputamist teemal „Kuidas Chuck Norrise automaatne programmianalüsaator seda teeks“.</p>
+<h2 id="osa-2-alternatiivne-lahenduskäik">Osa 2, alternatiivne lahenduskäik</h2>
+<p>Kui kujutada ette sellise programmi täitmisgraafi, siis jaguneb see jämedalt kolmeks:</p>
+<ul>
+<li>Positsioonid, kust saab nõutud lõpp-positsiooni &ndash; $A$</li>
+<li>Positsioonid, kuhu saab 0-positsioonist (esimeses pooles täidetav osa) &ndash; $B$</li>
+<li>Ülejäänud positsioonid, mis pole kuigi huvitavad.</li>
+</ul>
+<p>On oluline, et algse programmi korral kehtib $A\cap B = \emptyset$.</p>
+<p>Lisaks on veel üks huvitav hulk: need positsioonid, kuhu saab $B$-sse kuuluvate instruktsioonide modifitseerimisel &ndash; $C$. Selle hulga saab programmi algsel sisselugemisel lihtsa vaeva arvutada.</p>
+<p>$A$ on leitav lõpp-positsioonist tagurpidi otsinguga.</p>
+<p>Ülesande püstitus ütleb, et $|C\cap A|$ on täpselt $1$ ja see ongi see üks koht programmis, mida on vaja muuta &ndash; on ainult vaja teha natuke tagajalgade tööd, et kätte saada, milline see positsioon täpselt oli, mille juurde see üks hüpe kuulus.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahenduskäik siin (mõlemad variandid 2. osast): <a href="https://github.com/fazz/aoc/blob/master/aoc2020/day08.py">https://github.com/fazz/aoc/blob/master/aoc2020/day08.py</a></p>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
