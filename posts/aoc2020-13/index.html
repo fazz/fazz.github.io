@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.76.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/tags/aoc2020/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2020-13/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>aoc2020 | The Happler</title>
+  <title>AoC 2020, 13. päev | The Happler</title>
 </head>
 
   <body>
@@ -189,7 +189,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -231,132 +231,102 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>aoc2020</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2020, 13. päev
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 13, 2020
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/aoc2020/">aoc2020</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2020/day/13">https://adventofcode.com/2020/day/13</a></p>
+<h2 id="sebi-mis-sa-sebid-algarvud-tulevad-lõpuks-ikka-nurgast">Sebi mis Sa sebid, algarvud tulevad lõpuks ikka nurgast</h2>
+<p>Lõpuks ometi ülesanne, mis hingele (loe: võtab kõvasti vanduma, sest tagumikutunne ütleb, et lahendus on siinsamas, aga pea ei jaga ära pühapäeva hommikul). Kass istus ainult vaikselt kõrval ja kuulas hingestatud pobinat kolmes kohalikus keeles.</p>
+<p>Esimene osa on suhteliselt lihtne (mis muidugi ei tähenda, et ma poleks suutnud maailma kõige tobedamat programmeerimisviga sisse teha esimese hooga).</p>
+<p>Valem konkreetse bussi ooteaja saamiseks on järgmine:</p>
+<p>$$ ooteAeg = bussiNr \cdot (\lfloor \frac{saabumisAeg}{bussiNr} \rfloor + 1) - saabumisAeg $$</p>
+<p>Nendest ooteaegadest on vaja valida vähim ja arvutada vastus. Hoolikalt tuleb tähele panna, mida vastuseks küsitakse: bussi numbri ja ooteaja korrutist. See on tavaline trikk, millega vaip alt ära tõmmata.</p>
+<p>Teine osa on natuke krõbedam, juba ülesandepüstituses on hoiatatud, et arvud lähevad väga suureks. Enamasti tähendab selline hoiatus, et „ära rumaluke kuluta elektrit CPU ringiajamiseks, niikuinii sellest midagi kasu ei ole, leia optimaalne lahendus.“</p>
+<p>Esiteks on vaja tähele panna, et kõik bussinumbrid on algarvud ja matemaatiliselt tähendab algarvuliste tsüklite kokkupuutepunktide leidmine nende algarvude mingil viisil omavahel läbikorrutamist. See tuleneb aritmeetika põhiteoreemist<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> &ndash; arv, mis jagub täpselt mingite algarvudega on saadav ainult nende läbikorrutamise teel.</p>
+<p>Antud juhul komplitseerib ülesannet see, et vajalikud väärtused on nihkega, ehk lihtsalt korrutamisest ei piisa.</p>
+<p>Küll on võimalik koostada päris lihtne iteratiivne algoritm (jällegi: väljamõtlemine kell 7:15 hommikul ei olnud lihtne ja lisaks Pythonile oli vaja kolme kohalikku keelt).</p>
+<ol>
+<li>Võta esimeseks sammuks esimese bussi samm (sest see on see, mis peab lõpuks vastuse andma). Kui optimeerida tahad, võta kõige suurema numbriga bussi samm, aga siis pead vaatama, kuidas lõpus leida esimese bussi saabumise aega.</li>
+<li>Hakka ajajoont järjest läbi käima.</li>
+<li>Leides mõne bussi, mis saabub vajaliku nihkega pärast esimest bussi, hakkab kehtima uus reegel: kõik sobivad ajad esimese bussi saabumiseks on esimese bussi numbri ja tolle teise bussi numbri kordsed, ehk samm läheb kohe palju pikemaks. Iga sedasi leitud bussi korral tuleb sammu vastavalt korrutades kasvatada.</li>
+<li>Goto 2, kuniks korrutis sisaldab kõiki bussinumbreid.</li>
+</ol>
+<p>Minu sisendi puhul tuleb lahendus (suurusjärgus $10^{15}$) sedasi 575 sammuga (kaks tsüklit üksteise sees).</p>
+<p>Õppetund: joonista arvuridasid rohkem paberi peale välja, see ajab intuitsiooni paremini tööle.</p>
+<h2 id="alternatiivne-variant-2-osa-lahendamiseks">Alternatiivne variant 2. osa lahendamiseks</h2>
+<p>On olemas ka formaalselt parem viis 2. osa lahendamiseks, ennekõike neile, kes koolis ei maganud. Ma kirjutasin need võrrandisüsteemid isegi välja, aga mingil veidral kujul ja üldse ei saanud aru, et tegu on Hiina jäägiteoreemiga<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Häbi, ma olen ju tegelikult kirjutanud tootmissüsteemi koodi, kus on Hiina jäägiteoreem sees.</p>
+<p>Ühesõnaga, tekivad võrrandid, kus $z$ on otsitav ajahetk:</p>
+<p>$$ z\mod bussiNr_0 \equiv 0 $$
+$$ z\mod bussiNr_2 \equiv (bussiNr_2 - 2) $$
+$$ z\mod bussiNr_7 \equiv (bussiNr_7 - 7) $$</p>
+<p>Jne.</p>
+<p>See võrrandisüsteem on puhtal kujul lahendatav Hiina jäägiteoreemi abil, nagu näiteks autori lahkel viidatuna siin: <a href="https://hastebin.com/userumorow.apache">https://hastebin.com/userumorow.apache</a>.</p>
+<p>See algoritm on ka optimaalsem, minu sisendi puhul vaid 49 iteratsiooni.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahenduskäik siin: <a href="https://github.com/fazz/aoc/blob/master/aoc2020/day13.py">https://github.com/fazz/aoc/blob/master/aoc2020/day13.py</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://fangya.medium.com/chinese-remainder-theorem-with-python-a483de81fbb8">https://fangya.medium.com/chinese-remainder-theorem-with-python-a483de81fbb8</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-13/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 13. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-08/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 8. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-06/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 6. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-04/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 4. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
