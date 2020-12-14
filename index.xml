@@ -16,6 +16,7 @@
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/14
 Binaarväärtusi nikerdades võib omale kergesti unaaroperaatoriga näppu lõigata Lihtne kuid salakavala sõnastusega bitinikerdus.
 Päeva esteetikapunktid said kõik need programmid, mis täiesti ebapühal moel $string::replace()$ abil bitti nikerdasid. See viis selgelt lihtsama tulemuseni kui päris bittide nikerdamine.
+Esimene osa kell 07:17, teine osa 08:02. Nõrk.
 Lahendus Lahenduskäik siin, lappasin tagantjärgi mõlemad osad kokku aga ikka on mõttetult pikk programm: https://github.com/fazz/aoc/blob/master/aoc2020/day14.py</description>
     </item>
     
