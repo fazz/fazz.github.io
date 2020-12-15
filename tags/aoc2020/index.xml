@@ -6,7 +6,19 @@
     <description>Recent content in aoc2020 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2020/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2020/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2020, 15. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020-15/</link>
+      <pubDate>Tue, 15 Dec 2020 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020-15/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/15
+Off by one. No, two. No, one. Minus zero. Fuck! Ma mõtlesin et ma olen ainuke loll, kellel see ülesanne juhtme täiesti kokku ajab, aga ei, Redditit ja Facebooki lugedes on sellised PALJU.
+See ülesanne on vaja ette sööta kõigile, kes arvavad, et C-s annab küll igapidi korrektset ja turvalist programmi kirjutada. Väga õpetlik kraam.
+Tegelikult on tegemist täiesti vana ja tuntud teoreetilise konstruktsiooni variantsiooniga, nimelt Van Eck&amp;rsquo;i jadaga.</description>
+    </item>
+    
     <item>
       <title>AoC 2020, 14. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-14/</link>
