@@ -6,7 +6,18 @@
     <description>Recent content on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2020, 16. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020-16/</link>
+      <pubDate>Wed, 16 Dec 2020 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020-16/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/16
+Practice what you preach ehk ärge käige mu tegude järgi Ei ole väga keeruline ülesanne, eriti kui oled lapsena loogilisi elimineerimismänge piisavalt paberi peal teinud (teate küll, need mida praegu Facebookis ringi kedratakse kirjaga &amp;ldquo;ainult Einstein suudab lahendada&amp;rdquo; &amp;ndash; vanasti tehti selliseid suvisel koolivaheajal ajaviiteks, kui paljakäsi huntide jahtimisest villand sai).
+Sellest hoolimata suutsin esimest osa lahendades istutada teise osa jaoks sellise bugiseemne, et lõpuks vaatasin, kuidas andmed enne viimast korrutamist katki on, parandasin käsitsi ära, korrutasin õige tulemuse kokku ja siis hakkasin bugi otsima.</description>
+    </item>
+    
     <item>
       <title>AoC 2020, 15. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-15/</link>
@@ -14,7 +25,7 @@
       
       <guid>https://fazz.github.io/posts/aoc2020-15/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/15
-Off by one. No, two. No, one. Minus zero. Fuck! Ma mõtlesin et ma olen ainuke loll, kellel see ülesanne juhtme täiesti kokku ajab, aga ei, Redditit ja Facebooki lugedes on sellised PALJU.
+Off by one. No, two. No, one. Minus zero. Fuck! Ma mõtlesin, et ma olen ainuke loll, kellel see ülesanne juhtme täiesti kokku ajab, aga ei, Redditit ja Facebooki lugedes on sellised PALJU.
 See ülesanne on vaja ette sööta kõigile, kes arvavad, et C-s annab küll igapidi korrektset ja turvalist programmi kirjutada. Väga õpetlik kraam.
 Tegelikult on tegemist täiesti vana ja tuntud teoreetilise konstruktsiooni variantsiooniga, nimelt Van Eck&amp;rsquo;i jadaga (iga päev õpid midagi, aga OEIS on ennegi raskest kohast üle aidanud).</description>
     </item>
