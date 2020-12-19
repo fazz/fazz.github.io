@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.76.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/series/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2020-19/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Series | The Happler</title>
+  <title>AoC 2020, 19. päev | The Happler</title>
 </head>
 
   <body>
@@ -232,33 +232,71 @@
         <div>
           
   <main id="main">
-    <h1>Series</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2020, 19. päev
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/series/aoc/">
+      
+      <strong>Publish date: </strong>Dec 19, 2020
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (11) aoc
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/series/aoc2020/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (11) aoc2020
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="https://fazz.github.io/tags/aoc2020/">aoc2020</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2020/day/19">https://adventofcode.com/2020/day/19</a></p>
+<h2 id="kuidas-läheb-ah-tead-regulaarselt">Kuidas läheb? Ah, tead, regulaarselt&hellip;</h2>
+<p>Ülesandele peale vaadates on kohe selge, et reeglid kujutavad endast lihtsamat sorti regulaarse keele grammatikat (eriti oluline on selle kinnitamiseks fraas <em>there are no loops in the rules</em>). Arvud on mitteterminalid ning tähed terminalid.</p>
+<p>Sisendis antud reeglite transleerimine Pythoni $re$ jaoks sobivateks reegliteks on suuresti tagajalgade töö, kuigi esimesel katsel suutsin ma ikka üle mõtelda ja liiga keeruliselt selle lahendada.</p>
+<p>Teine osa on huvitavam ja seal tõmmatakse hooletul lugejal vaip alt ära. Pakutud muudatus &ndash; reeglite asendamine &ndash; on nimelt üsna keeruline viis seda ülesannet lahendada.</p>
+<p>Esimene pool polegi niiväga keeruline, selline rekursioon on regulaaravaldisega väljendatav kujul $&quot;(42)+&quot;$, seega jääb keel ikka regulaarseks. Teine pool aga tekitab avaldise $&quot;(42)\{ n \}(32)\{n\}&quot;, n \geq 1$, mis ei kirjelda enam regulaarse keele sõna.</p>
+<p>Õnneks on aga sisendis olevad sõnad piisavalt lühikesed, nii et väärtusi $n\gt 5$ pole vaja ning selle avaldise saab asendada lihtsalt veidi mölakama regulaaravaldisega.</p>
+<p>Trikk on neid asendusi teha mitte originaalsetes reeglites vaid $re$ regexi koostamise algoritmis sobiva koha peal.</p>
+<p>Esimene osa valmis 7:37, teine osa 8:01.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahendused, kaks tükki, teine 2x lühem kui esimene: <a href="https://github.com/fazz/aoc/blob/master/aoc2020/day19.py">https://github.com/fazz/aoc/blob/master/aoc2020/day19.py</a></p>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
