@@ -15,7 +15,7 @@
       <guid>https://fazz.github.io/posts/aoc2020-19/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/19
 Kuidas läheb? Ah, tead, regulaarselt&amp;hellip; Ülesandele peale vaadates on kohe selge, et reeglid kujutavad endast lihtsamat sorti regulaarse keele grammatikat (eriti oluline on selle kinnitamiseks fraas there are no loops in the rules). Arvud on mitteterminalid ning tähed terminalid.
-Sisendis antud reeglite transleerimine Pythoni $re$ jaoks sobivateks reegliteks on suuresti tagajalgade töö, kuigi esimesel katsel suutsin ma ikka üle mõtelda ja liiga keeruliselt selle lahendada.
+Sisendis antud reeglite transleerimine Pythoni $re$ jaoks sobivateks reegliteks on suuresti tagajalgade töö, kuigi esimesel katsel suutsin ma ikka üle mõtelda ja selle liiga keeruliselt lahendada.
 Teine osa on huvitavam ja seal tõmmatakse hooletul lugejal vaip alt ära.</description>
     </item>
     
