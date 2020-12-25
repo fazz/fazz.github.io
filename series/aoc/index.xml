@@ -6,7 +6,18 @@
     <description>Recent content in aoc on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Dec 2020 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Dec 2020 07:25:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2020, 25. päev</title>
+      <link>https://fazz.github.io/posts/aoc2020/aoc2020-25/</link>
+      <pubDate>Fri, 25 Dec 2020 07:25:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2020/aoc2020-25/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2020/day/25
+Hüppab Whitfield, valmistub Martin Esimese jõulupüha hommikuks pakuti murdmiseks lahjat Diffie-Hellmani võtmekehtestust1. Õige ka, eilse vorsti peale peabki midagi lahjat olema.
+Kuigi lahendus on toore jõuründe teema, siis neile, kes asjaga kokku pole puutunud: Diffie-Hellmani võtmekehtestus on selline põhimõtteliselt iidne kuid geniaalne tükk krüptograafilist aparatuuri, millele kas otse või oma derivaatide kaudu toetub sisuliselt kogu tänane internetiliikluse turvamine. Praktikas kasutatakse seda muidugi märksa suuremate ja märksa hoolikamalt valitud parameetritega kui siin ülesandes.</description>
+    </item>
+    
     <item>
       <title>AoC 2020, 19. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-19/</link>

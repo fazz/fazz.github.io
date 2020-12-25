@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.76.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/series/aoc2020/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2020/aoc2020-25/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>aoc2020 | The Happler</title>
+  <title>AoC 2020, 25. päev | The Happler</title>
 </head>
 
   <body>
@@ -231,212 +231,83 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>aoc2020</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2020, 25. päev
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 25, 2020
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/aoc2020/">aoc2020</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2020/day/25">https://adventofcode.com/2020/day/25</a></p>
+<h2 id="hüppab-whitfield-valmistub-martin">Hüppab Whitfield, valmistub Martin</h2>
+<p>Esimese jõulupüha hommikuks pakuti murdmiseks lahjat Diffie-Hellmani võtmekehtestust<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Õige ka, eilse vorsti peale peabki midagi lahjat olema.</p>
+<p>Kuigi lahendus on toore jõuründe teema, siis neile, kes asjaga kokku pole puutunud: Diffie-Hellmani võtmekehtestus on selline põhimõtteliselt iidne kuid geniaalne tükk krüptograafilist aparatuuri, millele kas otse või oma derivaatide kaudu toetub sisuliselt kogu tänane internetiliikluse turvamine. Praktikas kasutatakse seda muidugi märksa suuremate ja märksa hoolikamalt valitud parameetritega kui siin ülesandes.</p>
+<p>Tähtis on tähele panna, et tsüklis mingi arvuga läbi korrutamine ning seejärel jäägi leidmine ei ole mitte midagi muud kui <em>modulo</em> astendamine.</p>
+<p>Antud juhul tekib meil kaks võrrandit: $$subjectNr^{cLoops} \pmod 202012227 \equiv cPK$$ ja $$subjectN^{dLoops} \pmod 202012227 \equiv dPK$$</p>
+<p>(DH standardterminoloogias on $subjectNr$ hoopis <em>base</em> ehk alus ning $cLoops$ ja $dLoops$ vastava osapoole privaatvõtmed.)</p>
+<p>Diffie-Hellmani võtmevahetus toetub järgmisele ekvivalentsusele:</p>
+<p>$$sharedSecret \equiv cPK^{dLoops} \equiv dPK^{cLoops} \equiv subjectNr^{dLoops*cLoops}$$</p>
+<p>Kõige kiirem tee lahendamiseks (võib-olla küll mitte kõige kiirem CPU operatsioonide mõttes) on leida jõuründega emb kumb privaatvõtmetest (ülesande terminoloogias „<em>loop size</em>“) ning arvutada seejärel lahendus vastava valemi järgi.</p>
+<p>Matemaatiliselt taandub ülesanne diskreetse logaritmi leidmisele.</p>
+<p>Ma ei tea, kas sellel ülesandel on jõuründest efektiivsemaid lahendusi ka: minumeelest ei, sest 7 ja 202012227 on mõlemad algarvud. Kui oleks vaja selliseid diskreetseid logartime palju arvutada, saaks tabelipõhise algoritmiga tööd kiirendada, aga ühe logaritmi puhul mitte: <a href="https://core.ac.uk/download/pdf/206024005.pdf">https://core.ac.uk/download/pdf/206024005.pdf</a>.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahendus: <a href="https://github.com/fazz/aoc/blob/master/aoc2020/day25.py">https://github.com/fazz/aoc/blob/master/aoc2020/day25.py</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020/aoc2020-25/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 25. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-19/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 19. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-16/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 16. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-15/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 15. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-14/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 14. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-13/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 13. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-08/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 8. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-06/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 6. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-04/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 4. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2020-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2020, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
