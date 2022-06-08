@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>information security on The Happler</title>
+    <link>https://fazz.github.io/series/information-security/</link>
+    <description>Recent content in information security on The Happler</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Feb 2021 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information Security Resource bundle</title>
+      <link>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</link>
+      <pubDate>Sat, 13 Feb 2021 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</guid>
+      <description>Advisories  KPN Security Policy https://ciso-ksp.kpnnet.org/ , notably:  Application of cryptographic rules https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-410 Certificate pinning and mutual authentication https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-344    Blogs Cryptography  Dhole Moments (Soatok) https://soatok.blog/b/  Important snippets  Thomas H. Ptacek on TLS https://news.ycombinator.com/item?id=25380301  </description>
+    </item>
+    
+  </channel>
+</rss>

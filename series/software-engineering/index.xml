@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software engineering on The Happler</title>
+    <link>https://fazz.github.io/series/software-engineering/</link>
+    <description>Recent content in software engineering on The Happler</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2022 08:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to initialize multiple Python 3 virtual environments with each their own version of Python</title>
+      <link>https://fazz.github.io/posts/software/2022-04-27-python-multiversion/</link>
+      <pubDate>Wed, 27 Apr 2022 08:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/software/2022-04-27-python-multiversion/</guid>
+      <description>Introduction and constraints Any serious tinkerer needs a handful of CPython versions on their environment, readily available. No? You poor bastard. Anyways&amp;hellip;
+The process assumes that you compile CPython yourself. You may also grab precompiled binaries, if you want to.
+The whole process is based on Ubuntu 20.04 LTS, other distributions/OSes may have it differently.
+The mechanism is based on the virtualenv package: https://pypi.org/project/virtualenv/
+virtualenv assumes Python version 3.5+ (from the 3.</description>
+    </item>
+    
+    <item>
+      <title>Software Engineering Resource bundle</title>
+      <link>https://fazz.github.io/posts/software/software-engineering-resource-bundle/</link>
+      <pubDate>Sat, 13 Feb 2021 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/software/software-engineering-resource-bundle/</guid>
+      <description>Blogs   James Koppel http://www.pathsensitive.com/
+ Esp. http://www.pathsensitive.com/2021/03/why-programmers-shouldnt-learn-theory.html    Tom Gamon https://tomgamon.com/posts/
+  </description>
+    </item>
+    
+  </channel>
+</rss>
