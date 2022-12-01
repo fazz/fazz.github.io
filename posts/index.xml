@@ -6,7 +6,20 @@
     <description>Recent content in Posts on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2022 08:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 1. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-01/</link>
+      <pubDate>Thu, 01 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-01/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/1
+Sissejuhatus Et kõik ausalt ära rääkida, pean alustama sellest, et magasin lihtviisil sisse. No oli eile hea raamat näpus õhtul. Ühesõnaga, siit võitu ei tule. Ei üheski nendest tänaseks kuuest tabelis, kuhu ma ennast aastate jooksul sahkerdanud olen.
+Lahendus Ülesanne on sellisel eelsoojenduse tasemel, et ei oskagi pikemalt kommenteerida.
+Lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day01.py
+P.S. Päkapikumatkadel on toitumisrežiim ja koormuse jaotus selgelt paigast ära. Nad võiks mõne spetsialisti juurde koolitusele minna.</description>
+    </item>
+    
     <item>
       <title>How to initialize multiple Python 3 virtual environments with each their own version of Python</title>
       <link>https://fazz.github.io/posts/software/2022-04-27-python-multiversion/</link>
