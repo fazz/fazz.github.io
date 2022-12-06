@@ -6,7 +6,65 @@
     <description>Recent content in et on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/et/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/et/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 6. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-06/</link>
+      <pubDate>Tue, 06 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-06/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/6
+Sissejuhatus Nobedate näppude voor, Python jälle aitab. Tulemuseks tänase teise tärni globaalses edetabelis 926. koht.
+Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day06.py</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 5. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-05/</link>
+      <pubDate>Mon, 05 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-05/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/5
+Sissejuhatus Tegelikult lahendasin ma selle ülesande 24h hiljem, sest oli olulisemat teha.
+Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day05.py</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 4. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-04/</link>
+      <pubDate>Sun, 04 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-04/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/4
+Lahendus Neljas päev ja ikka veel soojendusülesanded, no las ta olla siis: https://github.com/fazz/aoc/blob/master/aoc2022/day04.py</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 3. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-03/</link>
+      <pubDate>Sat, 03 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-03/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/3
+Lahendus See on jälle see ülesanne, mille puhul võib öelda, et Python võidab, käed pükste tagataskus ja koni suunurgas.
+Lahendasin siin hiljuti üht loomult sarnast probleemi TypeScriptis ja midagi pole teha, TypeScripti/JavaScripti tüübisüsteem paneb sellistel juhtudel nutta tihkuma: hulgaoperatsioonid ega nende viisakas toetamine tüübisüsteemi tasemel ei ole keele ega standardteegi osa ning iga mees ja koer peab seetõttu oma lahenduse leiutama. Üks kööbakam kui teine.
+Igatahes: https://github.com/fazz/aoc/blob/master/aoc2022/day03.py</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 2. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-02/</link>
+      <pubDate>Fri, 02 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-02/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/2
+Lahendus Lihtne ülesanne ju? Järelikult tuleb teha keeruline lahendus.
+Triviaalne lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day02.py
+Mida teha selleks, et oleks ägedam?
+Tasub tähele panna, et meil on vaja kodeerida kaht liiki informatsiooni:
+ Milline element (kivi, paber, käärid) võidab millist. Kui palju punkte tuleb anda mingi konkreetse vastukäigu puhul.  Selgub, et seda annab kirjeldada väga kompaktselt. Detailid on alternatiivse lahenduse kommentaarides: https://github.com/fazz/aoc/blob/master/aoc2022/day02v2.py</description>
+    </item>
+    
     <item>
       <title>AoC 2022, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-01/</link>
