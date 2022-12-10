@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.93.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/tags/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2022/aoc2022-07/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>Tags | The Happler</title>
+  <title>AoC 2022, 7. päev | The Happler</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -219,99 +219,75 @@
         <div>
           
   <main id="main">
-    <h1>Tags</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2022, 7. päev
+    </h1>
+
+    <div class="date">
       
-        <li>
-          <h2>
-            <a href="/tags/aoc2020/">
+      
+      <strong>Publish date: </strong>Dec 7, 2022
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (12) aoc2020
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/aoc2022/">
+              
+              <a href="https://fazz.github.io/tags/aoc2022/">aoc2022</a>
+            </li>
+          
+            <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              (8) aoc2022
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/cryptography/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) cryptography
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/en/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (3) en
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/et/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (8) et
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/information-security/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) information security
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/python/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (1) python
-            </a>
-          </h2>
-        </li>
-      
-        <li>
-          <h2>
-            <a href="/tags/software-engineering/">
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              (2) software engineering
-            </a>
-          </h2>
-        </li>
-      
-    </ul>
+              
+              <a href="https://fazz.github.io/tags/et/">et</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2022/day/7">https://adventofcode.com/2022/day/7</a></p>
+<h2 id="sissejuhatus">Sissejuhatus</h2>
+<p>Nadi ülesanne, ennekõike sellepärast, et seda võib lahendada väga mitut moodi. Tuleb valida oma lahenduskäik ja sellega lihtsalt lõpuni joosta. Liiga keeruline ei ole, aga ei tohi naiivseid eeldusi teha, näiteks selle kohta, et kõik katalooginimed või kataloogide suurused on unikaalsed.</p>
+<p>Ma valisin lahendusviisi, mis säilitas maksimaalselt palju infot, sest kunagi ei tea, mida teine osa tuua võib. Selgus, et ei toonud midagi, ning tehes üsna lihtsa eelduse - sisend kirjeldab <em>depth-first</em> kaardistamise tulemusi - on võimalik kirjutada väga kompaktne ja vähe mälu kasutav pinupõhine lahendus.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Algne lahendus: <a href="https://github.com/fazz/aoc/blob/master/aoc2022/day07.py">https://github.com/fazz/aoc/blob/master/aoc2022/day07.py</a>
+Pinupõhine: <a href="https://github.com/fazz/aoc/blob/master/aoc2022/day07v2.py">https://github.com/fazz/aoc/blob/master/aoc2022/day07v2.py</a></p>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>

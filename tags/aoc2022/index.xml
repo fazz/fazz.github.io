@@ -6,7 +6,30 @@
     <description>Recent content in aoc2022 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 8. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-08/</link>
+      <pubDate>Thu, 08 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-08/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/8
+Sissejuhatus &amp;hellip; ehk muinasjutt sellest, kuidas päkapikud metsas ringi vaatasid.
+Esimese hooga arvutasin unise peaga keerukust ja sain väga hirmsad numbrid. Trükkisin hulka kood arvutisse, et seda keerukust vähendada, aga täitsa ilmaasjata: optimeeritud ja optimeerimata lahenduste poolt tehtavate pöörduste kogused puude pikkuste lugemiseks suhtuvad lõpuks ikka umbes 1:3.
+Kompaktse lahenduse saab lihtsalt kõiki puid läbi käies ja kirja pannes, kui kaugele sealt näeb ja kas näeb metsa servani.</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 7. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-07/</link>
+      <pubDate>Wed, 07 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-07/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/7
+Sissejuhatus Nadi ülesanne, ennekõike sellepärast, et seda võib lahendada väga mitut moodi. Tuleb valida oma lahenduskäik ja sellega lihtsalt lõpuni joosta. Liiga keeruline ei ole, aga ei tohi naiivseid eeldusi teha, näiteks selle kohta, et kõik katalooginimed või kataloogide suurused on unikaalsed.
+Ma valisin lahendusviisi, mis säilitas maksimaalselt palju infot, sest kunagi ei tea, mida teine osa tuua võib. Selgus, et ei toonud midagi, ning tehes üsna lihtsa eelduse - sisend kirjeldab depth-first kaardistamise tulemusi - on võimalik kirjutada väga kompaktne ja vähe mälu kasutav pinupõhine lahendus.</description>
+    </item>
+    
     <item>
       <title>AoC 2022, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-06/</link>
