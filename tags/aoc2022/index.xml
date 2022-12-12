@@ -6,7 +6,32 @@
     <description>Recent content in aoc2022 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 12. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-12/</link>
+      <pubDate>Mon, 12 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-12/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/12
+Jälle need päkapikumatkad Suhteliselt klassikaline lühima tee algoritmi ülesanne. Klassikaliselt õnnestus teha ka paar kirjaviga, mille tagaajamine hulganisti aega raiskas.
+Väike trikk asja juures siiski on: teise osa lahendamise jaoks tasub läbitavad lõigud panna kirja tagurpidi ja arvutada teepikkus lõpust algusesse, sellisel juhul on võimalik lahendada esimene ja teine pool koos, ühe Dijkstra algoritmi läbivaatusega.
+Lahendus Lahendus: https://github.com/fazz/aoc/blob/master/aoc2022/day12.py</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 9. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-09/</link>
+      <pubDate>Fri, 09 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-09/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/9
+Sissejuhatus Vana hea ussimäng. Uss ei tohi mitte katki minna, saba peab peale järele jõudma.
+Kui esimene osa kogemata õigel viisil lahendada, saab teise osa täitsa tasuta kätte.
+Sellest hoolimata kulutasin esimese osa lahendamisel päris palju aega lohakusvigade peale.
+Lahendus https://github.com/fazz/aoc/blob/master/aoc2022/day09.py</description>
+    </item>
+    
     <item>
       <title>AoC 2022, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-08/</link>
