@@ -6,7 +6,19 @@
     <description>Recent content in Posts on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 25. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-25/</link>
+      <pubDate>Sun, 25 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-25/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/25
+Väga kaunis Tõeliselt ilus väike ülesanne.
+Dekodeerimine on lihtne, tuleb lihtsalt positsioonid vastava järguga ($5^x$) läbi korrutada ja kokku liita.
+Summa tagasikodeerimine on mõnevõrra krõpsakam probleem, aga mitte keeruline. Iga positsioon, kuhu tuleb suurem väärtus kui 2, tuleb asendada sobiva negatiivse väärtusega ($y-5$) ning temast järgmist suuremat järku ühe võrra suurendada. Seejuures tuleb silmas pidada, et ka suurem järk võib selle tulemusena osutuda suuremaks kui 2, seega tuleb ülekandeid teha nii kaua kui vaja.</description>
+    </item>
+    
     <item>
       <title>AoC 2022, 19. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-19/</link>
