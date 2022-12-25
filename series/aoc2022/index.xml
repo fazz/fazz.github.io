@@ -6,7 +6,17 @@
     <description>Recent content in aoc2022 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2022, 19. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-19/</link>
+      <pubDate>Mon, 19 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-19/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/19
+Oh raisk Õnnetu ülesanne. Kulutasin hulka aega mitme päeva jooksul sellele, et välja mõtelda, mis on selle ülesande võti. Kõigepealt otsisin valest kohast (iseenese kinnimõtlemine ei ole tore), aga lõpuks tundub, et üht konkreetset võtit ei ole. Noh, mis seal ikka, sai treenida seda musklit ajus, mis graafe ja olekuruume suudab ette kujutada. Lõpuks õnnestus mul tööaeg saada kõigepealt sellistesse piiridesse, et teine osa oli võimalik lahendada ning seejärel kogu tööaeg 70 sekundi piirimaile.</description>
+    </item>
+    
     <item>
       <title>AoC 2022, 12. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-12/</link>
