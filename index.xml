@@ -15,8 +15,20 @@
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-25/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/25
 Väga kaunis Tõeliselt ilus väike ülesanne.
-Dekodeerimine on lihtne, tuleb lihtsalt positsioonid vastava järguga ($5^x$) läbi korrutada ja kokku liita.
-Summa tagasikodeerimine on mõnevõrra krõpsakam probleem, aga mitte keeruline. Iga positsioon, kuhu tuleb suurem väärtus kui 2, tuleb asendada sobiva negatiivse väärtusega ($y-5$) ning temast järgmist suuremat järku ühe võrra suurendada. Seejuures tuleb silmas pidada, et ka suurem järk võib selle tulemusena osutuda suuremaks kui 2, seega tuleb ülekandeid teha nii kaua kui vaja.</description>
+Dekodeerimine on lihtne, tuleb lihtsalt positsioonid vastava järguga ($5^x$) läbi korrutada ja kokku liita, ehk siis nagu ükskõik millise arvusüsteemi teisendamisel kümnendsüsteemi.
+Summa tagasikodeerimine on mõnevõrra krõpsakam probleem, aga mitte keeruline. Iga positsioon, kuhu tuleb suurem väärtus kui 2, tuleb asendada sobiva negatiivse väärtusega ($y-5$) ning temast järgmist suuremat järku ühe võrra suurendada. Seejuures tuleb silmas pidada, et ka suurem järk võib selle tulemusena osutuda suuremaks kui 2, seega tuleb väärtuste asendamist ja ülekandeid kõrgematesse järkudesse teha nii kaua kui vaja.</description>
+    </item>
+    
+    <item>
+      <title>AoC 2022, 22. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-22/</link>
+      <pubDate>Thu, 22 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-22/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/22
+Ahvid loevad kaarti, aga ahvid on ikka ahvid Esimene osa Ei ole liiga keeruline, kaardista ülesande sisselugemise ajal vastakuti jäävad positsioonid (või tuvasta nad lahendamise käigus) ja lahendus tuleb peaaegu tasuta kätte.
+Teine osa Siin tuleb teada, mismood näeb välja kuubi pinnalaotus, õigemini see, kuidas kuup pinnalaotuseks lõigatakse.
+Nimelt on selline lõige mööda kuubi servi alati puu, kahe kuni nelja lehega. Kuubi &amp;ldquo;kokkuõmblemine&amp;rdquo; ehk pinnalaotuse kokkupuutuvate servade tuvastamist tuleb alustada puu lehtedest, mis pinnalaotusel väljenduvad sisenurkadena.</description>
     </item>
     
     <item>
