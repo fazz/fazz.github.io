@@ -20,6 +20,18 @@ Summa tagasikodeerimine on mõnevõrra krõpsakam probleem, aga mitte keeruline.
     </item>
     
     <item>
+      <title>AoC 2022, 24. päev</title>
+      <link>https://fazz.github.io/posts/aoc2022/aoc2022-24/</link>
+      <pubDate>Sat, 24 Dec 2022 09:00:00 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/aoc2022/aoc2022-24/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2022/day/24
+Päkapikud on jobud ja kaotavad oma küpsised ära Ülesanne, mis näeb esmapilgul karvasem välja kui tundub.
+Paar viisi, kuidas sellest ülesandest mõtelda, et asi lihtsam oleks:
+ tuulte võimalike asendite arv tasapinnal on lõplik, nimelt võrdne mänguplatsi mõõtmete vähima ühiskordsega; ruum, kus tuleb liikuda, ei ole mitte kahemõõtmeline plats, vaid kolmemõõtmeline ruum, mille üheks dimensiooniks on aeg.  Kõige lihtsam lahendus esimesele osale on teostada laiuti otsing (BFS) mööda vabu punkte ruumis, jättes pidevalt sammude arvu meelde ning ning esimene samm lõpp-positsioonile ongi võimalik lühim tee.</description>
+    </item>
+    
+    <item>
       <title>AoC 2022, 22. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-22/</link>
       <pubDate>Thu, 22 Dec 2022 09:00:00 +0200</pubDate>

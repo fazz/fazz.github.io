@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.93.0-DEV" />
-  <link rel="canonical" href="https://fazz.github.io/tags/aoc2022/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2022/aoc2022-24/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>aoc2022 | The Happler</title>
+  <title>AoC 2022, 24. päev | The Happler</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -218,244 +218,81 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>aoc2022</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2022, 24. päev
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 24, 2022
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/aoc2022/">aoc2022</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2022/day/24">https://adventofcode.com/2022/day/24</a></p>
+<h2 id="päkapikud-on-jobud-ja-kaotavad-oma-küpsised-ära">Päkapikud on jobud ja kaotavad oma küpsised ära</h2>
+<p>Ülesanne, mis näeb esmapilgul karvasem välja kui tundub.</p>
+<p>Paar viisi, kuidas sellest ülesandest mõtelda, et asi lihtsam oleks:</p>
+<ul>
+<li>tuulte võimalike asendite arv tasapinnal on lõplik, nimelt võrdne mänguplatsi mõõtmete vähima ühiskordsega;</li>
+<li>ruum, kus tuleb liikuda, ei ole mitte kahemõõtmeline plats, vaid kolmemõõtmeline ruum, mille üheks dimensiooniks on aeg.</li>
+</ul>
+<p>Kõige lihtsam lahendus esimesele osale on teostada laiuti otsing (BFS) mööda vabu punkte ruumis, jättes pidevalt sammude arvu meelde ning ning esimene samm lõpp-positsioonile ongi võimalik lühim tee.</p>
+<p>Tuulte kõikvõimalikud asendid on seejuures võimalik räsitabelisse ette arvutada, ning liikumisel saab seetõttu odavalt järgi vaadata, kas konkreetne punkt on antud ajahetkel tuultest vaba või mitte.</p>
+<p>Teise osa lahendamisel tuleb sedasama protseduuri lihtsalt kaks täiendavat korda läbi teha, vahetades vahepeal algus- ja lõpp-punktid omavahel.</p>
+<p>Küll aga on selline lahendus suhteliselt aeglane, Python 3 realisatsioon töötab kahe osa peale kokku umbes viis sekundit.</p>
+<p>Ideid, kuidas lahendust kiirendada.</p>
+<ul>
+<li>Mulle eraldatud sisendandmed olid küllalt eripärased, nimelt sellised, mille puhul mõõtmete vähim ühiskordne on suhteliselt suur ($100 = 2^2 * 5^2, 35 = 5 * 7, lcm = 2^2 * 5^2 * 7 = 700$). Foorumitest on lugeda selliste sisendandmete kohta, mille puhul on vähim ühiskordne märksa väiksem. Küll aga saab ka sel puhul optimeerida ettearvutatavate platside kogust (ja seega vabade punktide järgivaatamise kiirust): horisontaalsuunas ning vertikaalsuunas liikuvate tuulte positsioone tuleb vaadata eraldi, siis on võimalik $700$ ettearvutatud platsi asemel piirduda $100 + 35 = 135$ platsiga. Kuna minu sisendandmete puhul oli teise osa tulemuseks $720$ sekundit, oli kõigi täielike platside ettearvutamine vähese kasuteguriga trikk.</li>
+<li>Lihtsa laiuti otsingu asemel kasutada <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">algoritmi A*</a> kohandatud varianti, mille puhul kasutatakse heuristilise mõõduna parasjagu uuritava punkti Manhattani distantsi lõpp-punktist. See võimaldab esimeses järjekorras tegeleda selliste punktidega, mis asuvad sihtkohale lähemal, vähendades läbivaadatavate variantide hulka oluliselt.</li>
+</ul>
+<p>Selliste trikkidega in võimalik viia lahenduse mõlema poole tööaeg kokku umbes 800ms kanti. Vähe? Palju? Ei tea. Kompileeritavates keeltes on bitinikerdamisega palju kiiremaid lahendusi saavutatud, aga kas see ka Pythonis võimalik on, arvutusliku keerukuse arvelt, ei tea.</p>
+<h2 id="lahendus">Lahendus</h2>
+<p>Lahendus: <a href="https://github.com/fazz/aoc/blob/master/aoc2022/day24.py">https://github.com/fazz/aoc/blob/master/aoc2022/day24.py</a></p>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-25/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 25. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-24/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 24. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-22/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 22. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-19/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 19. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-12/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 12. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-09/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 9. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-08/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 8. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-07/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 7. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-06/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 6. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-05/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 5. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-04/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 4. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
