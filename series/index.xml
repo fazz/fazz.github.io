@@ -6,7 +6,16 @@
     <description>Recent content in Series on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Feb 2023 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>information security</title>
+      <link>https://fazz.github.io/series/information-security/</link>
+      <pubDate>Mon, 20 Feb 2023 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/series/information-security/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aoc</title>
       <link>https://fazz.github.io/series/aoc/</link>
@@ -31,15 +40,6 @@
       <pubDate>Wed, 27 Apr 2022 08:00:00 +0200</pubDate>
       
       <guid>https://fazz.github.io/series/software-engineering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>information security</title>
-      <link>https://fazz.github.io/series/information-security/</link>
-      <pubDate>Sat, 13 Feb 2021 08:02:01 +0200</pubDate>
-      
-      <guid>https://fazz.github.io/series/information-security/</guid>
       <description></description>
     </item>
     

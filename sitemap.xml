@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://fazz.github.io/tags/cryptography/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/en/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/information-security/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/series/information-security/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/posts/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/series/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/</loc>
+    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
+  </url><url>
     <loc>https://fazz.github.io/series/aoc/</loc>
     <lastmod>2022-12-25T09:00:00+02:00</lastmod>
   </url><url>
@@ -12,18 +39,6 @@
     <lastmod>2022-12-25T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/series/aoc2022/</loc>
-    <lastmod>2022-12-25T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/posts/</loc>
-    <lastmod>2022-12-25T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/series/</loc>
-    <lastmod>2022-12-25T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/tags/</loc>
-    <lastmod>2022-12-25T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/</loc>
     <lastmod>2022-12-25T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/posts/aoc2022/aoc2022-24/</loc>
@@ -68,9 +83,6 @@
     <loc>https://fazz.github.io/posts/aoc2022/aoc2022-01/</loc>
     <lastmod>2022-12-01T09:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://fazz.github.io/tags/en/</loc>
-    <lastmod>2022-04-27T08:00:00+02:00</lastmod>
-  </url><url>
     <loc>https://fazz.github.io/posts/software/2022-04-27-python-multiversion/</loc>
     <lastmod>2022-04-27T08:00:00+02:00</lastmod>
   </url><url>
@@ -82,18 +94,6 @@
   </url><url>
     <loc>https://fazz.github.io/series/software-engineering/</loc>
     <lastmod>2022-04-27T08:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/tags/cryptography/</loc>
-    <lastmod>2021-02-13T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/tags/information-security/</loc>
-    <lastmod>2021-02-13T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/series/information-security/</loc>
-    <lastmod>2021-02-13T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</loc>
-    <lastmod>2021-02-13T08:02:01+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/posts/software/software-engineering-resource-bundle/</loc>
     <lastmod>2021-02-13T08:02:01+02:00</lastmod>

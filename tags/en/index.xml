@@ -6,7 +6,16 @@
     <description>Recent content in en on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Apr 2022 08:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Feb 2023 08:02:01 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information Security Resource bundle</title>
+      <link>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</link>
+      <pubDate>Mon, 20 Feb 2023 08:02:01 +0200</pubDate>
+      
+      <guid>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</guid>
+      <description>Advisories  KPN Security Policy https://ciso-ksp.kpnnet.org/ , notably:  Application of cryptographic rules https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-410 Certificate pinning and mutual authentication https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-344    Blogs Cryptography  Dhole Moments (Soatok) https://soatok.blog/b/ Lúcás Meier https://cronokirby.com/posts  Important snippets  Thomas H. Ptacek on TLS https://news.ycombinator.com/item?id=25380301  </description>
+    </item>
+    
     <item>
       <title>How to initialize multiple Python 3 virtual environments with each their own version of Python</title>
       <link>https://fazz.github.io/posts/software/2022-04-27-python-multiversion/</link>
@@ -18,15 +27,6 @@ The process assumes that you compile CPython yourself. You may also grab precomp
 The whole process is based on Ubuntu 20.04 LTS, other distributions/OSes may have it differently.
 The mechanism is based on the virtualenv package: https://pypi.org/project/virtualenv/
 virtualenv assumes Python version 3.5+ (from the 3.</description>
-    </item>
-    
-    <item>
-      <title>Information Security Resource bundle</title>
-      <link>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</link>
-      <pubDate>Sat, 13 Feb 2021 08:02:01 +0200</pubDate>
-      
-      <guid>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</guid>
-      <description>Advisories  KPN Security Policy https://ciso-ksp.kpnnet.org/ , notably:  Application of cryptographic rules https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-410 Certificate pinning and mutual authentication https://ciso-ksp.kpnnet.org/document/detail?id=KSP-RE-344    Blogs Cryptography  Dhole Moments (Soatok) https://soatok.blog/b/  Important snippets  Thomas H. Ptacek on TLS https://news.ycombinator.com/item?id=25380301  </description>
     </item>
     
     <item>
