@@ -6,70 +6,70 @@
     <description>Recent content in aoc on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 1. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-01/</link>
+      <pubDate>Fri, 01 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-01/</guid>
+      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele analüüside kirjutamine märksa raskem töö. Seega, mis sitasti see uuesti.
+Ülesanne Siin: https://adventofcode.com/2023/day/1
+Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.
+Esimese päeva kohta on ülesande teine pool päris ilusa nipiga, nipp oma korda näeb välja täpselt selline, et ülesandepüstituse kirjutamine ChatGPT jaoks mõttetult kaua aega võtaks (spekulatsioon muidugi).</description>
+    </item>
     <item>
       <title>AoC 2022, 25. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-25/</link>
       <pubDate>Sun, 25 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-25/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/25
 Väga kaunis Tõeliselt ilus väike ülesanne.
 Dekodeerimine on lihtne, tuleb lihtsalt positsioonid vastava järguga ($5^x$) läbi korrutada ja kokku liita, ehk siis nagu ükskõik millise arvusüsteemi teisendamisel kümnendsüsteemi.
 Summa tagasikodeerimine on mõnevõrra krõpsakam probleem, aga mitte keeruline. Iga positsioon, kuhu tuleb suurem väärtus kui 2, tuleb asendada sobiva negatiivse väärtusega ($y-5$) ning temast järgmist suuremat järku ühe võrra suurendada. Seejuures tuleb silmas pidada, et ka suurem järk võib selle tulemusena osutuda suuremaks kui 2, seega tuleb väärtuste asendamist ja ülekandeid kõrgematesse järkudesse teha nii kaua kui vaja.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 24. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-24/</link>
       <pubDate>Sat, 24 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-24/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/24
 Päkapikud on jobud ja kaotavad oma küpsised ära Ülesanne, mis näeb esmapilgul karvasem välja kui tundub.
 Paar viisi, kuidas sellest ülesandest mõtelda, et asi lihtsam oleks:
- tuulte võimalike asendite arv tasapinnal on lõplik, nimelt võrdne mänguplatsi mõõtmete vähima ühiskordsega; ruum, kus tuleb liikuda, ei ole mitte kahemõõtmeline plats, vaid kolmemõõtmeline ruum, mille üheks dimensiooniks on aeg.  Kõige lihtsam lahendus esimesele osale on teostada laiuti otsing (BFS) mööda vabu punkte ruumis, jättes pidevalt sammude arvu meelde ning ning esimene samm lõpp-positsioonile ongi võimalik lühim tee.</description>
+tuulte võimalike asendite arv tasapinnal on lõplik, nimelt võrdne mänguplatsi mõõtmete vähima ühiskordsega; ruum, kus tuleb liikuda, ei ole mitte kahemõõtmeline plats, vaid kolmemõõtmeline ruum, mille üheks dimensiooniks on aeg. Kõige lihtsam lahendus esimesele osale on teostada laiuti otsing (BFS) mööda vabu punkte ruumis, jättes pidevalt sammude arvu meelde ning ning esimene samm lõpp-positsioonile ongi võimalik lühim tee.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 22. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-22/</link>
       <pubDate>Thu, 22 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-22/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/22
 Ahvid loevad kaarti, aga ahvid on ikka ahvid Esimene osa Ei ole liiga keeruline, kaardista ülesande sisselugemise ajal vastakuti jäävad positsioonid (või tuvasta nad lahendamise käigus) ja lahendus tuleb peaaegu tasuta kätte.
 Teine osa Siin tuleb teada, mismood näeb välja kuubi pinnalaotus, õigemini see, kuidas kuup pinnalaotuseks lõigatakse.
 Nimelt on selline lõige mööda kuubi servi alati puu, kahe kuni nelja lehega. Kuubi &amp;ldquo;kokkuõmblemine&amp;rdquo; ehk pinnalaotuse kokkupuutuvate servade tuvastamist tuleb alustada puu lehtedest, mis pinnalaotusel väljenduvad sisenurkadena.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 19. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-19/</link>
       <pubDate>Mon, 19 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-19/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/19
 Oh raisk Õnnetu ülesanne. Kulutasin hulka aega mitme päeva jooksul sellele, et välja mõtelda, mis on selle ülesande võti. Kõigepealt otsisin valest kohast (iseenese kinnimõtlemine ei ole tore), aga lõpuks tundub, et üht konkreetset võtit ei ole. Noh, mis seal ikka, sai treenida seda musklit ajus, mis graafe ja olekuruume suudab ette kujutada. Lõpuks õnnestus mul tööaeg saada kõigepealt sellistesse piiridesse, et teine osa oli võimalik lahendada ning seejärel kogu tööaeg 70 sekundi piirimaile.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 12. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-12/</link>
       <pubDate>Mon, 12 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-12/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/12
 Jälle need päkapikumatkad Suhteliselt klassikaline lühima tee algoritmi ülesanne. Klassikaliselt õnnestus teha ka paar kirjaviga, mille tagaajamine hulganisti aega raiskas.
 Väike trikk asja juures siiski on: teise osa lahendamise jaoks tasub läbitavad lõigud panna kirja tagurpidi ja arvutada teepikkus lõpust algusesse, sellisel juhul on võimalik lahendada esimene ja teine pool koos, ühe Dijkstra algoritmi läbivaatusega.
 Lahendus Lahendus: https://github.com/fazz/aoc/blob/master/aoc2022/day12.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 9. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-09/</link>
       <pubDate>Fri, 09 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-09/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/9
 Sissejuhatus Vana hea ussimäng. Uss ei tohi mitte katki minna, saba peab peale järele jõudma.
@@ -77,93 +77,77 @@ Kui esimene osa kogemata õigel viisil lahendada, saab teise osa täitsa tasuta 
 Sellest hoolimata kulutasin esimese osa lahendamisel päris palju aega lohakusvigade peale.
 Lahendus https://github.com/fazz/aoc/blob/master/aoc2022/day09.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-08/</link>
       <pubDate>Thu, 08 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-08/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/8
 Sissejuhatus &amp;hellip; ehk muinasjutt sellest, kuidas päkapikud metsas ringi vaatasid.
 Esimese hooga arvutasin unise peaga keerukust ja sain väga hirmsad numbrid. Trükkisin hulka kood arvutisse, et seda keerukust vähendada, aga täitsa ilmaasjata: optimeeritud ja optimeerimata lahenduste poolt tehtavate pöörduste kogused puude pikkuste lugemiseks suhtuvad lõpuks ikka umbes 1:3.
 Kompaktse lahenduse saab lihtsalt kõiki puid läbi käies ja kirja pannes, kui kaugele sealt näeb ja kas näeb metsa servani.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 7. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-07/</link>
       <pubDate>Wed, 07 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-07/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/7
 Sissejuhatus Nadi ülesanne, ennekõike sellepärast, et seda võib lahendada väga mitut moodi. Tuleb valida oma lahenduskäik ja sellega lihtsalt lõpuni joosta. Liiga keeruline ei ole, aga ei tohi naiivseid eeldusi teha, näiteks selle kohta, et kõik katalooginimed või kataloogide suurused on unikaalsed.
 Ma valisin lahendusviisi, mis säilitas maksimaalselt palju infot, sest kunagi ei tea, mida teine osa tuua võib. Selgus, et ei toonud midagi, ning tehes üsna lihtsa eelduse - sisend kirjeldab depth-first kaardistamise tulemusi - on võimalik kirjutada väga kompaktne ja vähe mälu kasutav pinupõhine lahendus.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-06/</link>
       <pubDate>Tue, 06 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-06/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/6
 Sissejuhatus Nobedate näppude voor, Python jälle aitab. Tulemuseks tänase teise tärni globaalses edetabelis 926. koht.
 Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day06.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 5. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-05/</link>
       <pubDate>Mon, 05 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-05/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/5
 Sissejuhatus Tegelikult lahendasin ma selle ülesande 24h hiljem, sest oli olulisemat teha.
 Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day05.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 4. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-04/</link>
       <pubDate>Sun, 04 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-04/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/4
 Lahendus Neljas päev ja ikka veel soojendusülesanded, no las ta olla siis: https://github.com/fazz/aoc/blob/master/aoc2022/day04.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 3. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-03/</link>
       <pubDate>Sat, 03 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-03/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/3
 Lahendus See on jälle see ülesanne, mille puhul võib öelda, et Python võidab, käed pükste tagataskus ja koni suunurgas.
 Lahendasin siin hiljuti üht loomult sarnast probleemi TypeScriptis ja midagi pole teha, TypeScripti/JavaScripti tüübisüsteem paneb sellistel juhtudel nutta tihkuma: hulgaoperatsioonid ega nende viisakas toetamine tüübisüsteemi tasemel ei ole keele ega standardteegi osa ning iga mees ja koer peab seetõttu oma lahenduse leiutama. Üks kööbakam kui teine.
 Igatahes: https://github.com/fazz/aoc/blob/master/aoc2022/day03.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 2. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-02/</link>
       <pubDate>Fri, 02 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-02/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/2
 Lahendus Lihtne ülesanne ju? Järelikult tuleb teha keeruline lahendus.
 Triviaalne lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day02.py
 Mida teha selleks, et oleks ägedam?
 Tasub tähele panna, et meil on vaja kodeerida kaht liiki informatsiooni:
- Milline element (kivi, paber, käärid) võidab millist. Kui palju punkte tuleb anda mingi konkreetse vastukäigu puhul.  Selgub, et seda annab kirjeldada väga kompaktselt. Detailid on alternatiivse lahenduse kommentaarides: https://github.com/fazz/aoc/blob/master/aoc2022/day02v2.py</description>
+Milline element (kivi, paber, käärid) võidab millist. Kui palju punkte tuleb anda mingi konkreetse vastukäigu puhul. Selgub, et seda annab kirjeldada väga kompaktselt. Detailid on alternatiivse lahenduse kommentaarides: https://github.com/fazz/aoc/blob/master/aoc2022/day02v2.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-01/</link>
       <pubDate>Thu, 01 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-01/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/1
 Sissejuhatus Et kõik ausalt ära rääkida, pean alustama sellest, et magasin lihtviisil sisse. No oli eile hea raamat näpus õhtul. Ühesõnaga, siit võitu ei tule. Ei üheski nendest tänaseks kuuest tabelis, kuhu ma ennast aastate jooksul sahkerdanud olen.
@@ -171,58 +155,48 @@ Lahendus Ülesanne on sellisel eelsoojenduse tasemel, et ei oskagi pikemalt komm
 Lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day01.py
 P.S. Päkapikumatkadel on toitumisrežiim ja koormuse jaotus selgelt paigast ära. Nad võiks mõne spetsialisti juurde koolitusele minna.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 25. päev</title>
       <link>https://fazz.github.io/posts/aoc2020/aoc2020-25/</link>
       <pubDate>Fri, 25 Dec 2020 07:25:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020/aoc2020-25/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/25
 Hüppab Whitfield, valmistub Martin Esimese jõulupüha hommikuks pakuti murdmiseks lahjat Diffie-Hellmani võtmekehtestust1. Õige ka, eilse vorsti peale peabki midagi lahjat olema.
 Kuigi lahendus on toore jõuründe teema, siis neile, kes asjaga kokku pole puutunud: Diffie-Hellmani võtmekehtestus on selline põhimõtteliselt iidne kuid geniaalne tükk krüptograafilist aparatuuri, millele kas otse või oma derivaatide kaudu toetub sisuliselt kogu tänane internetiliikluse turvamine. Praktikas kasutatakse seda muidugi märksa suuremate ja märksa hoolikamalt valitud parameetritega kui siin ülesandes.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 19. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-19/</link>
       <pubDate>Sat, 19 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-19/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/19
 Kuidas läheb? Ah, tead, regulaarselt&amp;hellip; Ülesandele peale vaadates on kohe selge, et reeglid kujutavad endast lihtsamat sorti regulaarse keele grammatikat (eriti oluline on selle kinnitamiseks fraas there are no loops in the rules). Arvud on mitteterminalid ning tähed terminalid.
 Sisendis antud reeglite transleerimine Pythoni $re$ jaoks sobivateks reegliteks on suuresti tagajalgade töö, kuigi esimesel katsel suutsin ma ikka üle mõtelda ja selle liiga keeruliselt lahendada.
 Teine osa on huvitavam ja seal tõmmatakse hooletul lugejal vaip alt ära.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 16. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-16/</link>
       <pubDate>Wed, 16 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-16/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/16
 Practice what you preach ehk ärge käige mu tegude järgi Ei ole väga keeruline ülesanne, eriti kui oled lapsena loogilisi elimineerimismänge piisavalt paberi peal teinud (teate küll, need mida praegu Facebookis ringi kedratakse kirjaga &amp;ldquo;ainult Einstein suudab lahendada&amp;rdquo; &amp;ndash; vanasti tehti selliseid suvisel koolivaheajal ajaviiteks, kui paljakäsi huntide jahtimisest villand sai).
 Sellest hoolimata suutsin esimest osa lahendades istutada teise osa jaoks sellise bugiseemne, et lõpuks vaatasin, kuidas andmed enne viimast korrutamist katki on, parandasin käsitsi ära, korrutasin õige tulemuse kokku ja siis hakkasin bugi otsima.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 15. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-15/</link>
       <pubDate>Tue, 15 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-15/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/15
 Off by one. No, two. No, one. Minus zero. Fuck! Ma mõtlesin, et ma olen ainuke loll, kellel see ülesanne juhtme täiesti kokku ajab, aga ei, Redditit ja Facebooki lugedes on sellised PALJU.
 See ülesanne on vaja ette sööta kõigile, kes arvavad, et C-s annab küll igapidi korrektset ja turvalist programmi kirjutada. Väga õpetlik kraam.
 Tegelikult on tegemist täiesti vana ja tuntud teoreetilise konstruktsiooni variantsiooniga, nimelt Van Eck&amp;rsquo;i jadaga (iga päev õpid midagi, aga OEIS on ennegi raskest kohast üle aidanud).</description>
     </item>
-    
     <item>
       <title>AoC 2020, 14. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-14/</link>
       <pubDate>Mon, 14 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-14/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/14
 Binaarväärtusi nikerdades võib omale kergesti unaaroperaatoriga näppu lõigata Lihtne kuid salakavala sõnastusega bitinikerdus.
@@ -230,47 +204,39 @@ Päeva esteetikapunktid said kõik need programmid, mis täiesti ebapühal moel 
 Esimene osa kell 07:17, teine osa 08:02. Nõrk.
 Lahendus Lahenduskäik siin, lappasin tagantjärgi mõlemad osad kokku aga ikka on mõttetult pikk programm: https://github.com/fazz/aoc/blob/master/aoc2020/day14.py</description>
     </item>
-    
     <item>
       <title>AoC 2020, 13. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-13/</link>
       <pubDate>Sun, 13 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-13/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/13
 Sebi mis Sa sebid, algarvud tulevad lõpuks ikka nurgast Lõpuks ometi ülesanne, mis hingele (loe: võtab kõvasti vanduma, sest tagumikutunne ütleb, et lahendus on siinsamas, aga pea ei jaga ära pühapäeva hommikul). Kass istus ainult vaikselt kõrval ja kuulas hingestatud pobinat kolmes kohalikus keeles.
 Esimene osa on suhteliselt lihtne (mis muidugi ei tähenda, et ma poleks suutnud maailma kõige tobedamat programmeerimisviga sisse teha esimese hooga).
 Valem konkreetse bussi ooteaja saamiseks on järgmine:</description>
     </item>
-    
     <item>
       <title>AoC 2020, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-08/</link>
       <pubDate>Tue, 08 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-08/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/8
 AI parandab Su programmi ise ära ja teeb veel pai ka ja puhub peale Väikeste virtuaalmasinate kirjutamine ei ole kuigi huvitav, kui seda juba paar korda teinud oled, aga ma siiralt loodan, et mõne noore inimese kehutab selline asi assembleris programmeerima. Obskuursed ja salapärased oskused tulevad elus kasuks.
 Esimene osa on lihtne tsüklituvastus - hoia aiva läbitud $pc$-d meeles ja looda, et mälu otsa ei saa (ei ta saa).</description>
     </item>
-    
     <item>
       <title>AoC 2020, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-06/</link>
       <pubDate>Sun, 06 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-06/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/6
 Chuck Norris vastas kõik küsimused ära, ka need, mida polnud küsitud Hästi nunnu pisike ülesanne.
 Esimene reaktsioon oli lahendada bitmapi abil, 5. päeva ülesande inertsist, aga ei, see on hoopis lihtsalt harjutus hulgateooria põhitõdede kallal (kuigi ka bitmapi abil saab muidugi).
 Kui iga rida parsida tähtede kaupa hulgaks, siis igas grupis on esimese poole vastuseks nende hulkade ühisosa elementide arv ja teise poole vastuseks hulkade ühendi elementide arv.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 4. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-04/</link>
       <pubDate>Fri, 04 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-04/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/4
 Parsi mis Sa parsid, pärast on ikka SEGFAULT Aaaa&amp;hellip; loll ülesanne.
@@ -278,40 +244,33 @@ Mulle ei meeldi selline põlve otsas parserite nikerdamine, võib-olla ka sellep
 Kui mul peaks aega üle jääma, kirjutan selle ülesande lahenduse mõne vettpidava parseri peale, aga pigem ei jää. Aega üle siis.
 Lahendus Lahenduskäik siin: https://github.com/fazz/aoc/blob/master/aoc2020/day04.py</description>
     </item>
-    
     <item>
       <title>AoC 2020, 3. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-03/</link>
       <pubDate>Thu, 03 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-03/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/3
 Küll on kena kelguga Mulle kohe meeldivad sellised ülesanded, mida saab modulo aritmeetikaga lahendada. Ei teagi miks, amatöörkrüptograafi rõõmud vist.
 Teisalt on see selline ülesanne, mis on meelega sõnastatud hästi keerulisena ja kunst on ära tabada, milles on tegelikult uba. Brace yourselves, kes esimest aastat ülesandeid lahendavad, see läheb iga päevaga aiva hullemaks &amp;ndash; eelmisel aastal oli kaalukeeleks vist 18. päeva ülesanne, kus inimesed jäidki ülesandepüstitusse kinni, selmet vaadata graafi, mille kõrvad sealt tagant välja paistsid.</description>
     </item>
-    
     <item>
       <title>AoC 2020, 2. päev</title>
       <link>https://fazz.github.io/posts/aoc2020-02/</link>
       <pubDate>Wed, 02 Dec 2020 08:02:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020-02/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/2
 Võimatu missioon: süntaksiharjutusi Tänase ülesande kohta polegi muud öelda, kui et see oli lihtsalt Pythoni süntaksi ja teekide meeldetuletamiseks. Punkte said need, kes kõige varem üles tõusid ja kõige kiiremini trükkisid. Mina nende hulka ei kuulunud, oli vaja magada.
 Lahendus Lahenduskäik tekib ühel päeval siia: https://github.com/fazz/aoc/blob/master/aoc2020/day02.py</description>
     </item>
-    
     <item>
       <title>AoC 2020, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2020/aoc2020-01/</link>
       <pubDate>Tue, 01 Dec 2020 07:17:01 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2020/aoc2020-01/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2020/day/1
 Sissejuhatus Esialgu läks pahasti, ma ei saanud oma sisendit kätte &amp;ndash; 503 Gateway Timeout, aga kuna ma mõisa peale ei võistle, siis las ta olla. Teadaolevalt on ainult ühel eelmisel aastal ühe ülesandega olnud selliseid probleeme, mis nõudsid tolle konkreetse ülesande mittearvestamist.
 EDIT: Because of an outage during the day 1 puzzle unlock, day 1 is worth no points. Naah.
 Vihje Nagu ikka, on esimesed ülesanded soojenduseks, ei midagi komplitseeritut.</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,12 +6,22 @@
     <description>Recent content in et on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Dec 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://fazz.github.io/tags/et/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <atom:link href="https://fazz.github.io/tags/et/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 1. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-01/</link>
+      <pubDate>Fri, 01 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-01/</guid>
+      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele analüüside kirjutamine märksa raskem töö. Seega, mis sitasti see uuesti.
+Ülesanne Siin: https://adventofcode.com/2023/day/1
+Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.
+Esimese päeva kohta on ülesande teine pool päris ilusa nipiga, nipp oma korda näeb välja täpselt selline, et ülesandepüstituse kirjutamine ChatGPT jaoks mõttetult kaua aega võtaks (spekulatsioon muidugi).</description>
+    </item>
     <item>
       <title>AoC 2022, 9. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-09/</link>
       <pubDate>Fri, 09 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-09/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/9
 Sissejuhatus Vana hea ussimäng. Uss ei tohi mitte katki minna, saba peab peale järele jõudma.
@@ -19,93 +29,77 @@ Kui esimene osa kogemata õigel viisil lahendada, saab teise osa täitsa tasuta 
 Sellest hoolimata kulutasin esimese osa lahendamisel päris palju aega lohakusvigade peale.
 Lahendus https://github.com/fazz/aoc/blob/master/aoc2022/day09.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-08/</link>
       <pubDate>Thu, 08 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-08/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/8
 Sissejuhatus &amp;hellip; ehk muinasjutt sellest, kuidas päkapikud metsas ringi vaatasid.
 Esimese hooga arvutasin unise peaga keerukust ja sain väga hirmsad numbrid. Trükkisin hulka kood arvutisse, et seda keerukust vähendada, aga täitsa ilmaasjata: optimeeritud ja optimeerimata lahenduste poolt tehtavate pöörduste kogused puude pikkuste lugemiseks suhtuvad lõpuks ikka umbes 1:3.
 Kompaktse lahenduse saab lihtsalt kõiki puid läbi käies ja kirja pannes, kui kaugele sealt näeb ja kas näeb metsa servani.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 7. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-07/</link>
       <pubDate>Wed, 07 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-07/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/7
 Sissejuhatus Nadi ülesanne, ennekõike sellepärast, et seda võib lahendada väga mitut moodi. Tuleb valida oma lahenduskäik ja sellega lihtsalt lõpuni joosta. Liiga keeruline ei ole, aga ei tohi naiivseid eeldusi teha, näiteks selle kohta, et kõik katalooginimed või kataloogide suurused on unikaalsed.
 Ma valisin lahendusviisi, mis säilitas maksimaalselt palju infot, sest kunagi ei tea, mida teine osa tuua võib. Selgus, et ei toonud midagi, ning tehes üsna lihtsa eelduse - sisend kirjeldab depth-first kaardistamise tulemusi - on võimalik kirjutada väga kompaktne ja vähe mälu kasutav pinupõhine lahendus.</description>
     </item>
-    
     <item>
       <title>AoC 2022, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-06/</link>
       <pubDate>Tue, 06 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-06/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/6
 Sissejuhatus Nobedate näppude voor, Python jälle aitab. Tulemuseks tänase teise tärni globaalses edetabelis 926. koht.
 Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day06.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 5. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-05/</link>
       <pubDate>Mon, 05 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-05/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/5
 Sissejuhatus Tegelikult lahendasin ma selle ülesande 24h hiljem, sest oli olulisemat teha.
 Lahendus Ega pole siingi suurt midagi kommenteerida: https://github.com/fazz/aoc/blob/master/aoc2022/day05.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 4. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-04/</link>
       <pubDate>Sun, 04 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-04/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/4
 Lahendus Neljas päev ja ikka veel soojendusülesanded, no las ta olla siis: https://github.com/fazz/aoc/blob/master/aoc2022/day04.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 3. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-03/</link>
       <pubDate>Sat, 03 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-03/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/3
 Lahendus See on jälle see ülesanne, mille puhul võib öelda, et Python võidab, käed pükste tagataskus ja koni suunurgas.
 Lahendasin siin hiljuti üht loomult sarnast probleemi TypeScriptis ja midagi pole teha, TypeScripti/JavaScripti tüübisüsteem paneb sellistel juhtudel nutta tihkuma: hulgaoperatsioonid ega nende viisakas toetamine tüübisüsteemi tasemel ei ole keele ega standardteegi osa ning iga mees ja koer peab seetõttu oma lahenduse leiutama. Üks kööbakam kui teine.
 Igatahes: https://github.com/fazz/aoc/blob/master/aoc2022/day03.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 2. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-02/</link>
       <pubDate>Fri, 02 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-02/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/2
 Lahendus Lihtne ülesanne ju? Järelikult tuleb teha keeruline lahendus.
 Triviaalne lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day02.py
 Mida teha selleks, et oleks ägedam?
 Tasub tähele panna, et meil on vaja kodeerida kaht liiki informatsiooni:
- Milline element (kivi, paber, käärid) võidab millist. Kui palju punkte tuleb anda mingi konkreetse vastukäigu puhul.  Selgub, et seda annab kirjeldada väga kompaktselt. Detailid on alternatiivse lahenduse kommentaarides: https://github.com/fazz/aoc/blob/master/aoc2022/day02v2.py</description>
+Milline element (kivi, paber, käärid) võidab millist. Kui palju punkte tuleb anda mingi konkreetse vastukäigu puhul. Selgub, et seda annab kirjeldada väga kompaktselt. Detailid on alternatiivse lahenduse kommentaarides: https://github.com/fazz/aoc/blob/master/aoc2022/day02v2.py</description>
     </item>
-    
     <item>
       <title>AoC 2022, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2022/aoc2022-01/</link>
       <pubDate>Thu, 01 Dec 2022 09:00:00 +0200</pubDate>
-      
       <guid>https://fazz.github.io/posts/aoc2022/aoc2022-01/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2022/day/1
 Sissejuhatus Et kõik ausalt ära rääkida, pean alustama sellest, et magasin lihtviisil sisse. No oli eile hea raamat näpus õhtul. Ühesõnaga, siit võitu ei tule. Ei üheski nendest tänaseks kuuest tabelis, kuhu ma ennast aastate jooksul sahkerdanud olen.
@@ -113,6 +107,5 @@ Lahendus Ülesanne on sellisel eelsoojenduse tasemel, et ei oskagi pikemalt komm
 Lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2022/day01.py
 P.S. Päkapikumatkadel on toitumisrežiim ja koormuse jaotus selgelt paigast ära. Nad võiks mõne spetsialisti juurde koolitusele minna.</description>
     </item>
-    
   </channel>
 </rss>

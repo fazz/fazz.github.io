@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://fazz.github.io/series/aoc/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/posts/aoc2023/aoc2023-01/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/aoc2023/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/series/aoc2023/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/et/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/posts/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/series/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/tags/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://fazz.github.io/</loc>
+    <lastmod>2023-12-01T08:00:00+02:00</lastmod>
+  </url><url>
     <loc>https://fazz.github.io/tags/cryptography/</loc>
     <lastmod>2023-02-20T08:02:01+02:00</lastmod>
   </url><url>
@@ -16,21 +43,6 @@
   </url><url>
     <loc>https://fazz.github.io/posts/infosec/information-security-resource-bundle/</loc>
     <lastmod>2023-02-20T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/posts/</loc>
-    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/series/</loc>
-    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/tags/</loc>
-    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/</loc>
-    <lastmod>2023-02-20T08:02:01+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/series/aoc/</loc>
-    <lastmod>2022-12-25T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/posts/aoc2022/aoc2022-25/</loc>
     <lastmod>2022-12-25T09:00:00+02:00</lastmod>
@@ -54,9 +66,6 @@
     <lastmod>2022-12-12T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/posts/aoc2022/aoc2022-09/</loc>
-    <lastmod>2022-12-09T09:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://fazz.github.io/tags/et/</loc>
     <lastmod>2022-12-09T09:00:00+02:00</lastmod>
   </url><url>
     <loc>https://fazz.github.io/posts/aoc2022/aoc2022-08/</loc>
