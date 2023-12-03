@@ -6,8 +6,27 @@
     <description>Recent content in aoc2023 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/tags/aoc2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 3. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-03/</link>
+      <pubDate>Sun, 03 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-03/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/3
+Lahendus Rumal on inimene, kes on rumal. Mul oli hommikul umbes 20 minutit selleks, et ülesanne lahendada, ja sellest oleks pidanud piisama vabalt vähemalt esimese poole jaoks, aga kui ikka ei oska mõista, et realõppu tuleb kohelda kui arvu lõpetavat sümbolit, no siis pole midagi teha. Tuleb oodata õhtuni, mis on teadupärast hommikust targem ja siis lahendada.
+Lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2023/day03.py</description>
+    </item>
+    <item>
+      <title>AoC 2023, 2. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-02/</link>
+      <pubDate>Sat, 02 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-02/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/2
+Lahendus Suuresti on tegu ülesandega, mis taandub sisendi parsimisele, seega ei oskagi suurt midagi kommenteerida. Ühtlasi tundun olevat ka maailma mastaabis päris kiire parsija:
+That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 303 on this star&#39;s leaderboard.
+That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 533 on this star&#39;s leaderboard.</description>
+    </item>
     <item>
       <title>AoC 2023, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-01/</link>
