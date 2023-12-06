@@ -6,8 +6,39 @@
     <description>Recent content in Posts on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 6. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-06/</link>
+      <pubDate>Wed, 06 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-06/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/6
+Lahendus Ülesande esimene pool lahendub lihtsa jõuvõttega: tuleb itereerida üle võimalike saavutatavate teepikkuste ning panna kirja, kui mitu neist kvalifitseerub. Jõuvõte on lihtsasti programmeeritav, ei tohi ju unustada, et võistlus käib ka aja peale.
+Ka teine pool on sama jõuvõttega lahendatav, ma olen isegi natuke üllatunud, et on, sest siin oleks olnud võimalus lihtsad lahendused välistada.
+Aga igal juhul võtab teise poole jõuvõte nii kaua aega, et korraliku programmeerija au ei luba sellise lahendusega leppida.</description>
+    </item>
+    <item>
+      <title>AoC 2023, 5. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-05/</link>
+      <pubDate>Tue, 05 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-05/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/5
+Lahendus Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.
+No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku päris paljusõnalise lahenduse, tegin sinna sisse mitu off-by-one viga ja raiskasin hullusti aega.
+Töötav loogika on aga lihtne:
+Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$.</description>
+    </item>
+    <item>
+      <title>AoC 2023, 4. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-04/</link>
+      <pubDate>Mon, 04 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-04/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/4
+Lahendus Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine.
+Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.
+On vaja pidada ainult arvestust selle üle, kui palju meil mingeid kaarte on (algul $1$) ning seejärel iga võidu korral kasvatada vastavate kaartide arvu niipalju, kui meil parasjagu menetletavat kaarti käes on.</description>
+    </item>
     <item>
       <title>AoC 2023, 3. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-03/</link>
