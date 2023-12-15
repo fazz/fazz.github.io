@@ -6,8 +6,18 @@
     <description>Recent content in aoc on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 07 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 7. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-07/</link>
+      <pubDate>Thu, 07 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-07/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/7
+Lahendus Kaartidele järjekorra andmiseks ühtegi võluvitsa ei ole: tuleb nad lihtsalt programmikoodi sellises järjekorras kirja panna, nagu ülesanne ette näeb. Seda ka teises osas, kus järjekord on teistsugune.
+Esimese poole lahendamine on Pythonis üsna trikkideta: tuleb realiseerida ülesandekohane komparaatorfunktsioon ning käte list selle abil õigesse järjekorda sorteerida.
+Teise poolega on natuke keerulisem, kuivõrd komparaator peab valima mitme võimaliku J asenduse vahel. Küll aga tuleb tähele panna, et J-i on mõtet asendada ainult selliste kaartidega, mis on juba käes olemas: sellised asendused annavad alati tugevama tulemuse kui asendamine mõne kaardiga väljastpoolt.</description>
+    </item>
     <item>
       <title>AoC 2023, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-06/</link>
