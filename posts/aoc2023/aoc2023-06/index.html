@@ -268,13 +268,14 @@
 <p>Ülesande esimene pool lahendub lihtsa jõuvõttega: tuleb itereerida üle võimalike saavutatavate teepikkuste ning panna kirja, kui mitu neist kvalifitseerub. Jõuvõte on lihtsasti programmeeritav, ei tohi ju unustada, et võistlus käib ka aja peale.</p>
 <p>Ka teine pool on sama jõuvõttega lahendatav, ma olen isegi natuke üllatunud, et on, sest siin oleks olnud võimalus lihtsad lahendused välistada.</p>
 <p>Aga igal juhul võtab teise poole jõuvõte nii kaua aega, et korraliku programmeerija au ei luba sellise lahendusega leppida.</p>
-<p>Kuidas saab kiiremini ?</p>
+<p>Kuidas saab kiiremini?</p>
 <ul>
 <li>Lihtne on leida, et peab kehtima tingimus: $rekord \lt vajutuseAeg*(aeg-vajutuseAeg)$ või et siis $-vajutuseAeg^2 + vajutuseAeg*aeg - rekord &gt; 0$.</li>
 <li>Sellest on võimalik tuletada, et ruutvõrrandi $-vajutuseAeg^2 + vajutuseAeg*aeg - rekord = 0$ lahendid võiks anda mingi aimduse sellest, millises vahemikus võiks olla nupuvajutuse ajad, et paadi poolt läbitud teepikkus ületaks kehtiva rekordi.</li>
 <li>Juhul, kui lahendid oleks kõik murdarvulised, oleks võitvate variantide arvu leidmine lihtne: $\lfloor suurem \rfloor - \lfloor väiksem \rfloor$ &ndash; see annaks, mitu võitvat sõitu on viimasest mittevõitvast sõidust viimase võitva sõiduni (vajutuse aja järgi lugedes).</li>
 <li>Paraku on osad lahendid täisarvulised ning nende vahe on ühe võrra suurem, kui võitvate sõitude arv, seda peab arvesse võtma.</li>
 </ul>
+<p>Samas võib aga võtta ka <code>SymPy</code> või muu sarnase vahendi ning lihtsalt esialgse võrratuse lahendada.</p>
 <p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day06.py">https://github.com/fazz/aoc/blob/master/aoc2023/day06.py</a></p>
 
   </main>

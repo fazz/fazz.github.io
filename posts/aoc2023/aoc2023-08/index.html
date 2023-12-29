@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.120.4">
-  <link rel="canonical" href="https://fazz.github.io/posts/aoc2023/aoc2023-04/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2023/aoc2023-08/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>AoC 2023, 4. päev | The Happler</title>
+  <title>AoC 2023, 8. päev | The Happler</title>
 </head>
 
   <body>
@@ -223,13 +223,13 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      AoC 2023, 4. päev
+      AoC 2023, 8. päev
     </h1>
 
     <div class="date">
       
       
-      <strong>Publish date: </strong>Dec 4, 2023
+      <strong>Publish date: </strong>Dec 8, 2023
       
         
       
@@ -263,15 +263,24 @@
     
 
     <h2 id="ülesanne">Ülesanne</h2>
-<p>Siin: <a href="https://adventofcode.com/2023/day/4">https://adventofcode.com/2023/day/4</a></p>
+<p>Siin: <a href="https://adventofcode.com/2023/day/8">https://adventofcode.com/2023/day/8</a></p>
 <h2 id="lahendus">Lahendus</h2>
 <h3 id="esimene-pool">Esimene pool</h3>
-<p>Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine ($2^{-1}$ on teadupärast
-$\frac{1}{2}$).</p>
+<p>Ülesande esimene pool on küllalt lihtne tee läbisammumise ülesanne, tuleb ainult jälgida seda, et sisendi esimesel real antud valikujuhised moodustavad lõpmatu ringi, st. lõppu jõudes tuleb sujuvalt algusest jätkata.</p>
 <h3 id="teine-pool">Teine pool</h3>
-<p>Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.</p>
-<p>On vaja pidada ainult arvestust selle üle, kui palju meil mingeid kaarte on (algul $1$) ning seejärel iga võidu korral kasvatada vastavate kaartide arvu niipalju, kui meil parasjagu menetletavat kaarti käes on. Kuna kaardipakki käiakse läbi ühes kindlas suunas ning suurendatakse ainult nende kaartide arvu, mis on sellessamas suunas, annabki see lähenemine õige vastuse.</p>
-<p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day04.py">https://github.com/fazz/aoc/blob/master/aoc2023/day04.py</a></p>
+<p>Ülesande teine pool on justkui tavaline vähima ühiskordse leidmine, sest võib ometi eeldada, et kõigi kummituste läbi käidud teed moodustavad mingi kindla pikkusega tsükli ning ülesande vastuseks on selliste tsüklite pikkuste vähim ühiskordne.</p>
+<p>Küll aga tekib ülesandepüstitust vaadates paar ebamugavad küsimust:</p>
+<ul>
+<li>Kas võib olla nii, et kummitus, mis alustab positsioonilt <code>11A</code>, lõpetab positsioonil <code>22Z</code>?</li>
+<li>Kas võib olla nii, et kummitus, mis alustab positsioonilt <code>11A</code>, lõpetab küll positsioonil <code>11A</code>, kuid läbib seda positsiooni veel ühe kuni mitu korda, enne kui jõuab oma täistsükliga lõpuni?</li>
+<li>Lisaks on võimalikud veel mõned variatsioonid eeloleval teemal&hellip;</li>
+</ul>
+<p>Vastus esimesele küsimusele on jaatav, sest eksisteerib <code>AAA</code>, aga mitte <code>AAZ</code> (vähemalt minu sisendandmetes).</p>
+<p>Vastus teisele küsimusele on eitav, aga seda peab lihtsalt eksperimentaalselt kontrollima.</p>
+<p>Tulemusena tähendab see, et ülesanne on märksa lihtsam kui ta mingis absoluutvariandis olla võiks.</p>
+<p>Lahendamiseks on vaja jälgida iga kummitust tema teekonnal, kuniks on teada kõigi kummituste läbitud kinniste teekondade pikkused. Teekond on lõppenud, kui kummitus saabub mingisse paika, mille nimi lõppeb <code>Z</code>-tähega.</p>
+<p>Seejärel on vaja mõne käepärase meetodiga, näiteks algarvudeks tegurdamise abil, leida nende teepikkuste vähim ühiskordaja.</p>
+<p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day08.py">https://github.com/fazz/aoc/blob/master/aoc2023/day08.py</a></p>
 
   </main>
   <div id="disqus-container">

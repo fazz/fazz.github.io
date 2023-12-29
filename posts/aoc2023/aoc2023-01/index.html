@@ -263,12 +263,19 @@
     
 
     <h2 id="aoc-ad-2023">AoC, A.D. 2023</h2>
-<p>Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&ndash;lahendustele analüüside kirjutamine on märksa raskem töö. Seega, mis sitasti, see uuesti.</p>
+<p>Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&ndash;lahendustele analüüside kirjutamine on märksa raskem töö (<a href="/tags/aoc2020/">2020</a> ja <a href="/tags/aoc2022/">2022</a> kurvad mälestusmärgid). Seega mis sitasti, see uuesti.</p>
 <h2 id="ülesanne">Ülesanne</h2>
 <p>Siin: <a href="https://adventofcode.com/2023/day/1">https://adventofcode.com/2023/day/1</a></p>
 <h2 id="lahendus">Lahendus</h2>
 <p>Päris mitmel spordialal kehtib reegel &ldquo;võidab see, kes teeb kõige vähem vigu&rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.</p>
 <p>Esimese päeva kohta on ülesande teine pool päris ilusa nipiga, nipp oma korda näeb välja täpselt selline, et ülesandepüstituse kirjutamine ChatGPT jaoks mõttetult kaua aega võtaks (spekulatsioon muidugi).</p>
+<h3 id="esimene-pool">Esimene pool</h3>
+<p>Igast reast eraldi tuleb välja filtreerida kümnendnumbrid ning nendest numbritest esimene ja viimane omavahel kümnendarvuks formeerida. Ja siis iga rea sedasi saadud kalibreerimisväärtused tulemuseks summeerida.</p>
+<h3 id="teine-pool">Teine pool</h3>
+<p>Teine pool, nagu öeldud, on nipiga.</p>
+<p>On vaja märgata, et inglise keele arvsõnadel kipuvad esimesed ja viimased tähed kattuma (<code>twO</code> vs <code>OnE</code> vs <code>EighT</code> vs <code>Two</code> jne) ning ülesandepüstituses ei ole kuidagi mainitud, et need arvsõnad peaks sisendandmetes olema esitatud ülekatteta.</p>
+<p>Seetõttu ei saa arvsõnu asendada numbritega lihtviisil, vaid tuleb jätta võimalus, et asendatud arvsõna kõrval on ühemärgilise ülekattega veel üks arvsõna.</p>
+<p>Muus osas on teise poole lahendus sama kui esimesel poolel.</p>
 <p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day01.py">https://github.com/fazz/aoc/blob/master/aoc2023/day01.py</a></p>
 
   </main>

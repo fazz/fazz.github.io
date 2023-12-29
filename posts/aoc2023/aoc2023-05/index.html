@@ -265,13 +265,16 @@
     <h2 id="ülesanne">Ülesanne</h2>
 <p>Siin: <a href="https://adventofcode.com/2023/day/5">https://adventofcode.com/2023/day/5</a></p>
 <h2 id="lahendus">Lahendus</h2>
+<h3 id="esimene-pool">Esimene pool</h3>
 <p>Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.</p>
+<h3 id="teine-pool">Teine pool</h3>
 <p>No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku <a href="https://github.com/fazz/aoc/commit/37c4376d9dd0bbca4633821d44aade9d5300fa6f">päris paljusõnalise lahenduse</a>, tegin sinna sisse mitu <em>off-by-one</em> viga ja raiskasin hullusti aega.</p>
 <p>Töötav loogika on aga lihtne:</p>
 <ul>
-<li>Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$.</li>
+<li>Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$. Kolmeksjagamine käib selle järgi, kuidas parasjagu kasutusel olev teisenduskaardi esimene kättejuhtuv reegel sisendiks olevat vahemikku katab. &ldquo;Keskmine osa&rdquo; on defineeritud kui see, mida hetkel kasutatav reegel katab.</li>
 <li>Keskmine osa, kui selline eksisteerib, tuleb teisendada.</li>
 <li>Vasak ja parem osa, kui sellised eksisteerivad, tuleb anda edasi järgmisele teisendusreeglile ning teisenduste kaardi lõppemisel anda järgmisele kaardile edasi, nii nagu on.</li>
+<li>Seda loogikat tuleb korrata üle kõigi teisenduskaartide.</li>
 </ul>
 <p>Väike DRY nipp: ülesande esimene pool on võimalik taandada teiseks pooleks, defineerides sisendandmed kui vahemikud, mille pikkus on $1$.</p>
 <p>Lõplik lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day05.py">https://github.com/fazz/aoc/blob/master/aoc2023/day05.py</a></p>

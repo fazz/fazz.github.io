@@ -6,8 +6,17 @@
     <description>Recent content on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 8. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-08/</link>
+      <pubDate>Fri, 08 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-08/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/8
+Lahendus Esimene pool Ülesande esimene pool on küllalt lihtne tee läbisammumise ülesanne, tuleb ainult jälgida seda, et sisendi esimesel real antud valikujuhised moodustavad lõpmatu ringi, st. lõppu jõudes tuleb sujuvalt algusest jätkata.
+Teine pool Ülesande teine pool on justkui tavaline vähima ühiskordse leidmine, sest võib ometi eeldada, et kõigi kummituste läbi käidud teed moodustavad mingi kindla pikkusega tsükli ning ülesande vastuseks on selliste tsüklite pikkuste vähim ühiskordne.</description>
+    </item>
     <item>
       <title>AoC 2023, 7. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-07/</link>
@@ -34,8 +43,8 @@ Aga igal juhul võtab teise poole jõuvõte nii kaua aega, et korraliku programm
       <pubDate>Tue, 05 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-05/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2023/day/5
-Lahendus Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.
-No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku päris paljusõnalise lahenduse, tegin sinna sisse mitu off-by-one viga ja raiskasin hullusti aega.
+Lahendus Esimene pool Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.
+Teine pool No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku päris paljusõnalise lahenduse, tegin sinna sisse mitu off-by-one viga ja raiskasin hullusti aega.
 Töötav loogika on aga lihtne:
 Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$.</description>
     </item>
@@ -45,9 +54,8 @@ Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuur
       <pubDate>Mon, 04 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-04/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2023/day/4
-Lahendus Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine.
-Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.
-On vaja pidada ainult arvestust selle üle, kui palju meil mingeid kaarte on (algul $1$) ning seejärel iga võidu korral kasvatada vastavate kaartide arvu niipalju, kui meil parasjagu menetletavat kaarti käes on.</description>
+Lahendus Esimene pool Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine ($2^{-1}$ on teadupärast $\frac{1}{2}$).
+Teine pool Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.</description>
     </item>
     <item>
       <title>AoC 2023, 3. päev</title>
@@ -56,7 +64,8 @@ On vaja pidada ainult arvestust selle üle, kui palju meil mingeid kaarte on (al
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-03/</guid>
       <description>Ülesanne Siin: https://adventofcode.com/2023/day/3
 Lahendus Rumal on inimene, kes on rumal. Mul oli hommikul umbes 20 minutit selleks, et ülesanne lahendada, ja sellest oleks pidanud piisama vabalt vähemalt esimese poole jaoks, aga kui ikka ei oska mõista, et realõppu tuleb kohelda kui arvu lõpetavat sümbolit, no siis pole midagi teha. Tuleb oodata õhtuni, mis on teadupärast hommikust targem ja siis lahendada.
-Lahenduskäik: https://github.com/fazz/aoc/blob/master/aoc2023/day03.py</description>
+Ülesande mõlemad pooled saab lahendada platsi ühekordse läbikäimisega:
+esimese poole tuvastatud detailinumbreid summeerides, teise poole jaoks hammasrattaid (*) koos neile lähedalseisvate detailidega üles lugedes.</description>
     </item>
     <item>
       <title>AoC 2023, 2. päev</title>
@@ -73,10 +82,9 @@ That&#39;s the right answer! You are one gold star closer to restoring snow oper
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-01/</link>
       <pubDate>Fri, 01 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-01/</guid>
-      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&amp;ndash;lahendustele analüüside kirjutamine on märksa raskem töö. Seega, mis sitasti, see uuesti.
+      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&amp;ndash;lahendustele analüüside kirjutamine on märksa raskem töö (2020 ja 2022 kurvad mälestusmärgid). Seega mis sitasti, see uuesti.
 Ülesanne Siin: https://adventofcode.com/2023/day/1
-Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.
-Esimese päeva kohta on ülesande teine pool päris ilusa nipiga, nipp oma korda näeb välja täpselt selline, et ülesandepüstituse kirjutamine ChatGPT jaoks mõttetult kaua aega võtaks (spekulatsioon muidugi).</description>
+Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.</description>
     </item>
     <item>
       <title>Information Security Resource bundle</title>
