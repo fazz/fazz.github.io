@@ -6,8 +6,17 @@
     <description>Recent content in aoc2023 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/aoc2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 9. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-09/</link>
+      <pubDate>Sat, 09 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-09/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/9
+Lahendus Esimene pool Selle ülesande puhul on vaja panna tähele paari asja:
+vastus sõltub ainult ja ainult deltade loetlemisel tekkiva tagurpidi (tüvi)püramiidi paremast servast, tingimus, et deltasid tuleb leida, kuni kõik on nullid, on oluline &amp;ndash; eelneva põhjal võib tekkida mulje, et saab piirduda ainult äärmise nulliga, kuid see ei ole nii (illustreerimiseks sobib see, mis toimub kolmanda näite-sisendi vasakus servas). Iga sisendi vastuseks on lõpuks vastava püramiidi parema serva elementide summa.</description>
+    </item>
     <item>
       <title>AoC 2023, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-08/</link>
