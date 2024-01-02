@@ -6,8 +6,18 @@
     <description>Recent content in aoc on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 10 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/aoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 10. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-10/</link>
+      <pubDate>Sun, 10 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-10/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/10
+Lahendus Esimene pool Ülesanne taandub sisuliselt kinnise teekonna pikkuse leidmisele. Kuna küsitakse üht konkreetset punkti, võib julgelt eeldada, et kogu teekonnal on paarisarv punkte (paaritu arv alguspunkti arvesse võtmata).
+Omaette probleem on see, kuidas tuvastada, kuhu poole alguspunktist liikuma hakata. Loomulikult võib lähteandmetele peale vaadata ja panna programmi kirja, kuhu poole astuda, aga universaalne lahendus võiks võimalikud liikumissuunad ise lähteandmetest leida.
+Teine pool Teine pool on klassikaline arvutusgeomeetria ülesanne: tuleb tuvastada, kas mingi punkt on kinnise kõvera sees või mitte.</description>
+    </item>
     <item>
       <title>AoC 2023, 9. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-09/</link>
