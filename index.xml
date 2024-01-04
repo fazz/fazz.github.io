@@ -6,8 +6,19 @@
     <description>Recent content on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 11. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-11/</link>
+      <pubDate>Mon, 11 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-11/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/11
+Lahendus Esimene pool Ülesanne kõlab juba sedasi, et kui esimeses pooles on mingi suurus kasvanud kaks korda, siis teises pooles kasvab see suurus umbes miljard korda.
+See tähendab, et tasub kohe vastavalt programmeerida.
+Algatuseks on tarvis kokku lugeda, kui palju on selliseid ridu ja veerge, mis üldse kasvavad ning panna see kirja.
+Seejärel, iga galaktikapaari Manhattani distantsi arvutades kokku lugeda, kui palju nende vahele tühe ridu või veerge jääb ning tulemust vastavalt täiendada.</description>
+    </item>
     <item>
       <title>AoC 2023, 10. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-10/</link>

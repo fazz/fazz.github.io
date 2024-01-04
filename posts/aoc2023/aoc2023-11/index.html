@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.120.4">
-  <link rel="canonical" href="https://fazz.github.io/posts/aoc2023/aoc2023-10/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2023/aoc2023-11/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>AoC 2023, 10. päev | The Happler</title>
+  <title>AoC 2023, 11. päev | The Happler</title>
 </head>
 
   <body>
@@ -223,13 +223,13 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      AoC 2023, 10. päev
+      AoC 2023, 11. päev
     </h1>
 
     <div class="date">
       
       
-      <strong>Publish date: </strong>Dec 10, 2023
+      <strong>Publish date: </strong>Dec 11, 2023
       
         
       
@@ -263,21 +263,17 @@
     
 
     <h2 id="ülesanne">Ülesanne</h2>
-<p>Siin: <a href="https://adventofcode.com/2023/day/10">https://adventofcode.com/2023/day/10</a></p>
+<p>Siin: <a href="https://adventofcode.com/2023/day/11">https://adventofcode.com/2023/day/11</a></p>
 <h2 id="lahendus">Lahendus</h2>
 <h3 id="esimene-pool">Esimene pool</h3>
-<p>Ülesanne taandub sisuliselt kinnise teekonna pikkuse leidmisele. Kuna küsitakse üht konkreetset punkti, võib julgelt eeldada, et kogu teekonnal on paarisarv punkte (paaritu arv alguspunkti arvesse võtmata).</p>
-<p>Omaette probleem on see, kuidas tuvastada, kuhu poole alguspunktist liikuma hakata. Loomulikult võib lähteandmetele peale vaadata ja panna programmi kirja, kuhu poole astuda, aga universaalne lahendus võiks võimalikud liikumissuunad ise lähteandmetest leida.</p>
+<p>Ülesanne kõlab juba sedasi, et kui esimeses pooles on mingi suurus kasvanud kaks korda, siis teises pooles kasvab see suurus umbes miljard korda.</p>
+<p>See tähendab, et tasub kohe vastavalt programmeerida.</p>
+<p>Algatuseks on tarvis kokku lugeda, kui palju on selliseid ridu ja veerge, mis üldse kasvavad ning panna see kirja.</p>
+<p>Seejärel, iga galaktikapaari Manhattani distantsi arvutades kokku lugeda, kui palju nende vahele tühe ridu või veerge jääb ning tulemust vastavalt täiendada.</p>
 <h3 id="teine-pool">Teine pool</h3>
-<p>Teine pool on klassikaline arvutusgeomeetria ülesanne: tuleb tuvastada, kas mingi punkt on kinnise kõvera sees või mitte.</p>
-<p>Selleks on üks hea lihtne algoritm: tõmmata sirglõik uuritavast punktist kuhugi, mis on kindlasti väljaspool seda kinnist kõverat ning lugeda ära, mitu korda see lõik kõveraga lõikub. Paarisarvuline lõikumiste arv tähendab, et punkt on väljaspool kõverat, paarituarvuline, et kõvera sees.</p>
-<p>Üks probleem, mis on vaja kõigepealt lahendada, on saada aru, millist toru elementi kujutab endast alguspunkt. Selleks kulub hästi ära esimese üleande jaoks kirjutatud alustussuundade tuvastamine.</p>
-<p>Edasi tuleb kogu plats ühes suunas, näiteks ridade kaupa, läbi käia ning iga tühja punkti kohta otsustada, kas ta on kinnise toruringi sees või mitte.</p>
-<p>Ridade kaupa jalutades on toru ületamine ristisuunas (üle <code>|</code>) lihtne, kuid pikisuunas (kahe põlve vahel) natuke keerulisem. Väike trikk siinjuures on lugeda torupõlvesid suurusena <code>0,5</code>, osad negatiivsed, osad positiivsed, kuid vastassuunalised samade märkidega. Sel juhul on nii, et kahe vastassuunalise põlve ületamine annab tulemuseks <code>1,0</code>, ehk et toru on ületatud.</p>
-<p>Praalimisminutid:</p>
-<p><code>That's the right answer!  You are one gold star closer to restoring snow operations. You got rank 387 on this star's leaderboard. [Continue to Part Two]</code></p>
-<p><code>That's the right answer!  You are one gold star closer to restoring snow operations. You got rank 670 on this star's leaderboard.You have completed Day 10!</code></p>
-<p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day10.py">https://github.com/fazz/aoc/blob/master/aoc2023/day10.py</a></p>
+<p>Nagu arvata oli, saigi kahest&hellip; mitte miljard, aga siiski miljon.</p>
+<p>Kuna lahendus oli juba valmis, tuli preemiaks 625. koht teise poole edetabelis.</p>
+<p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day11.py">https://github.com/fazz/aoc/blob/master/aoc2023/day11.py</a></p>
 
   </main>
   <div id="disqus-container">
