@@ -6,115 +6,91 @@
     <description>Recent content in aoc2023 on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2023 08:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/aoc2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AoC 2023, 12. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-12/</link>
+      <pubDate>Tue, 12 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-12/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/12&#xA;Lahendus Esimene pool Ülesandepüstitus ja pilguheit sisendile ütleb, et esimene pool on lahendatav suhteliselt lihtsa jõumeetodiga, nagu tavaliselt. Ja jällegi on õhus kahtlus, et teine pool viib keerukuse lakke. Seetõttu pole esimest poolt eraldi erilist mõtet analüüsida, vaataks parem, mis teises pooles juhtub.&#xA;Oluline on lihtsalt aru saada, et iga mustris esinev küsimärk tähendab üht otsustamata valikut kahe valikuvariandi vahel, seega tuleb $n$ küsimärgiga mustri jõumeetodiga lahendamiseks vaadata läbi $2^n$ varianti.</description>
+    </item>
     <item>
       <title>AoC 2023, 11. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-11/</link>
       <pubDate>Mon, 11 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-11/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/11
-Lahendus Esimene pool Ülesanne kõlab juba sedasi, et kui esimeses pooles on mingi suurus kasvanud kaks korda, siis teises pooles kasvab see suurus umbes miljard korda.
-See tähendab, et tasub kohe vastavalt programmeerida.
-Algatuseks on tarvis kokku lugeda, kui palju on selliseid ridu ja veerge, mis üldse kasvavad ning panna see kirja.
-Seejärel, iga galaktikapaari Manhattani distantsi arvutades kokku lugeda, kui palju nende vahele tühe ridu või veerge jääb ning tulemust vastavalt täiendada.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/11&#xA;Lahendus Esimene pool Ülesanne kõlab juba sedasi, et kui esimeses pooles on mingi suurus kasvanud kaks korda, siis teises pooles kasvab see suurus umbes miljard korda.&#xA;See tähendab, et tasub kohe vastavalt programmeerida.&#xA;Algatuseks on tarvis kokku lugeda, kui palju on selliseid ridu ja veerge, mis üldse kasvavad ning panna see kirja.&#xA;Seejärel, iga galaktikapaari Manhattani distantsi arvutades kokku lugeda, kui palju nende vahele tühe ridu või veerge jääb ning tulemust vastavalt täiendada.</description>
     </item>
     <item>
       <title>AoC 2023, 10. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-10/</link>
       <pubDate>Sun, 10 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-10/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/10
-Lahendus Esimene pool Ülesanne taandub sisuliselt kinnise teekonna pikkuse leidmisele. Kuna küsitakse üht konkreetset punkti, võib julgelt eeldada, et kogu teekonnal on paarisarv punkte (paaritu arv alguspunkti arvesse võtmata).
-Omaette probleem on see, kuidas tuvastada, kuhu poole alguspunktist liikuma hakata. Loomulikult võib lähteandmetele peale vaadata ja panna programmi kirja, kuhu poole astuda, aga universaalne lahendus võiks võimalikud liikumissuunad ise lähteandmetest leida.
-Teine pool Teine pool on klassikaline arvutusgeomeetria ülesanne: tuleb tuvastada, kas mingi punkt on kinnise kõvera sees või mitte.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/10&#xA;Lahendus Esimene pool Ülesanne taandub sisuliselt kinnise teekonna pikkuse leidmisele. Kuna küsitakse üht konkreetset punkti, võib julgelt eeldada, et kogu teekonnal on paarisarv punkte (paaritu arv alguspunkti arvesse võtmata).&#xA;Omaette probleem on see, kuidas tuvastada, kuhu poole alguspunktist liikuma hakata. Loomulikult võib lähteandmetele peale vaadata ja panna programmi kirja, kuhu poole astuda, aga universaalne lahendus võiks võimalikud liikumissuunad ise lähteandmetest leida.&#xA;Teine pool Teine pool on klassikaline arvutusgeomeetria ülesanne: tuleb tuvastada, kas mingi punkt on kinnise kõvera sees või mitte.</description>
     </item>
     <item>
       <title>AoC 2023, 9. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-09/</link>
       <pubDate>Sat, 09 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-09/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/9
-Lahendus Esimene pool Selle ülesande puhul on vaja panna tähele paari asja:
-vastus sõltub ainult ja ainult deltade loetlemisel tekkiva tagurpidi (tüvi)püramiidi paremast servast, tingimus, et deltasid tuleb leida, kuni kõik on nullid, on oluline &amp;ndash; eelneva põhjal võib tekkida mulje, et saab piirduda ainult äärmise nulliga, kuid see ei ole nii (illustreerimiseks sobib see, mis toimub kolmanda näite-sisendi vasakus servas). Iga sisendi vastuseks on lõpuks vastava püramiidi parema serva elementide summa.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/9&#xA;Lahendus Esimene pool Selle ülesande puhul on vaja panna tähele paari asja:&#xA;vastus sõltub ainult ja ainult deltade loetlemisel tekkiva tagurpidi (tüvi)püramiidi paremast servast, tingimus, et deltasid tuleb leida, kuni kõik on nullid, on oluline &amp;ndash; eelneva põhjal võib tekkida mulje, et saab piirduda ainult äärmise nulliga, kuid see ei ole nii (illustreerimiseks sobib see, mis toimub kolmanda näite-sisendi vasakus servas). Iga sisendi vastuseks on lõpuks vastava püramiidi parema serva elementide summa.</description>
     </item>
     <item>
       <title>AoC 2023, 8. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-08/</link>
       <pubDate>Fri, 08 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-08/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/8
-Lahendus Esimene pool Ülesande esimene pool on küllalt lihtne tee läbisammumise ülesanne, tuleb ainult jälgida seda, et sisendi esimesel real antud valikujuhised moodustavad lõpmatu ringi, st. lõppu jõudes tuleb sujuvalt algusest jätkata.
-Teine pool Ülesande teine pool on justkui tavaline vähima ühiskordse leidmine, sest võib ometi eeldada, et kõigi kummituste läbi käidud teed moodustavad mingi kindla pikkusega tsükli ning ülesande vastuseks on selliste tsüklite pikkuste vähim ühiskordne.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/8&#xA;Lahendus Esimene pool Ülesande esimene pool on küllalt lihtne tee läbisammumise ülesanne, tuleb ainult jälgida seda, et sisendi esimesel real antud valikujuhised moodustavad lõpmatu ringi, st. lõppu jõudes tuleb sujuvalt algusest jätkata.&#xA;Teine pool Ülesande teine pool on justkui tavaline vähima ühiskordse leidmine, sest võib ometi eeldada, et kõigi kummituste läbi käidud teed moodustavad mingi kindla pikkusega tsükli ning ülesande vastuseks on selliste tsüklite pikkuste vähim ühiskordne.</description>
     </item>
     <item>
       <title>AoC 2023, 7. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-07/</link>
       <pubDate>Thu, 07 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-07/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/7
-Lahendus Kaartidele järjekorra andmiseks ühtegi võluvitsa ei ole: tuleb nad lihtsalt programmikoodi sellises järjekorras kirja panna, nagu ülesanne ette näeb. Seda ka teises osas, kus järjekord on teistsugune.
-Esimese poole lahendamine on Pythonis üsna trikkideta: tuleb realiseerida ülesandekohane komparaatorfunktsioon ning käte list selle abil õigesse järjekorda sorteerida.
-Teise poolega on natuke keerulisem, kuivõrd komparaator peab valima mitme võimaliku J asenduse vahel. Küll aga tuleb tähele panna, et J-i on mõtet asendada ainult selliste kaartidega, mis on juba käes olemas: sellised asendused annavad alati tugevama tulemuse kui asendamine mõne kaardiga väljastpoolt.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/7&#xA;Lahendus Kaartidele järjekorra andmiseks ühtegi võluvitsa ei ole: tuleb nad lihtsalt programmikoodi sellises järjekorras kirja panna, nagu ülesanne ette näeb. Seda ka teises osas, kus järjekord on teistsugune.&#xA;Esimese poole lahendamine on Pythonis üsna trikkideta: tuleb realiseerida ülesandekohane komparaatorfunktsioon ning käte list selle abil õigesse järjekorda sorteerida.&#xA;Teise poolega on natuke keerulisem, kuivõrd komparaator peab valima mitme võimaliku J asenduse vahel. Küll aga tuleb tähele panna, et J-i on mõtet asendada ainult selliste kaartidega, mis on juba käes olemas: sellised asendused annavad alati tugevama tulemuse kui asendamine mõne kaardiga väljastpoolt.</description>
     </item>
     <item>
       <title>AoC 2023, 6. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-06/</link>
       <pubDate>Wed, 06 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-06/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/6
-Lahendus Ülesande esimene pool lahendub lihtsa jõuvõttega: tuleb itereerida üle võimalike saavutatavate teepikkuste ning panna kirja, kui mitu neist kvalifitseerub. Jõuvõte on lihtsasti programmeeritav, ei tohi ju unustada, et võistlus käib ka aja peale.
-Ka teine pool on sama jõuvõttega lahendatav, ma olen isegi natuke üllatunud, et on, sest siin oleks olnud võimalus lihtsad lahendused välistada.
-Aga igal juhul võtab teise poole jõuvõte nii kaua aega, et korraliku programmeerija au ei luba sellise lahendusega leppida.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/6&#xA;Lahendus Ülesande esimene pool lahendub lihtsa jõuvõttega: tuleb itereerida üle võimalike saavutatavate teepikkuste ning panna kirja, kui mitu neist kvalifitseerub. Jõuvõte on lihtsasti programmeeritav, ei tohi ju unustada, et võistlus käib ka aja peale.&#xA;Ka teine pool on sama jõuvõttega lahendatav, ma olen isegi natuke üllatunud, et on, sest siin oleks olnud võimalus lihtsad lahendused välistada.&#xA;Aga igal juhul võtab teise poole jõuvõte nii kaua aega, et korraliku programmeerija au ei luba sellise lahendusega leppida.</description>
     </item>
     <item>
       <title>AoC 2023, 5. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-05/</link>
       <pubDate>Tue, 05 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-05/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/5
-Lahendus Esimene pool Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.
-Teine pool No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku päris paljusõnalise lahenduse, tegin sinna sisse mitu off-by-one viga ja raiskasin hullusti aega.
-Töötav loogika on aga lihtne:
-Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/5&#xA;Lahendus Esimene pool Ülesande esimene pool on päris lihtne, sest kui keeruline saab olla täisarvude mingisse lõiku kuuluvuse kontroll. Aga mõistagi, kui vaadata arvude suurusjärke, tekib selge teadmine, et teises pooles on mingit teravamat pirukat oodata.&#xA;Teine pool No muidugi nii läkski. Mõtlesin üle, kirjutasin kokku päris paljusõnalise lahenduse, tegin sinna sisse mitu off-by-one viga ja raiskasin hullusti aega.&#xA;Töötav loogika on aga lihtne:&#xA;Iga sisendiks olev vahemik tuleb jagada kolmeks: vasak, keskmine, parem, kusjuures lihtsamapoolse matemaatilise avaldisega on võimalik igal juhul väljendada seda, et kui vastav osa puudub (näiteks: kui teisendusreegel katab vahemiku täielikult, siis vasak ja parem pool puuduvad), siis on tema pikkus $0$.</description>
     </item>
     <item>
       <title>AoC 2023, 4. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-04/</link>
       <pubDate>Mon, 04 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-04/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/4
-Lahendus Esimene pool Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine ($2^{-1}$ on teadupärast $\frac{1}{2}$).
-Teine pool Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/4&#xA;Lahendus Esimene pool Ülesande esimeses pooles ei ole vaja teha muud, kui lugeda kokku, kui suur on iga kaardi võidunumbrite hulk ($c$) ning skoori saamiseks summeerida kokku $2^{c-1}$, arvestades erijuhtu, et $c=0$ korral on skoor $0$. Ehk siis tegelikult töötab ka $\lfloor 2^{c-1}\rfloor$ kokkusummeerimine ($2^{-1}$ on teadupärast $\frac{1}{2}$).&#xA;Teine pool Teine pool on üks neist reetlikest ülesandepüstitustest, mis lausa kutsub oma andmestruktuuri kasvatama. Ei, sellesse lõksu ei ole vaja astuda.</description>
     </item>
     <item>
       <title>AoC 2023, 3. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-03/</link>
       <pubDate>Sun, 03 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-03/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/3
-Lahendus Rumal on inimene, kes on rumal. Mul oli hommikul umbes 20 minutit selleks, et ülesanne lahendada, ja sellest oleks pidanud piisama vabalt vähemalt esimese poole jaoks, aga kui ikka ei oska mõista, et realõppu tuleb kohelda kui arvu lõpetavat sümbolit, no siis pole midagi teha. Tuleb oodata õhtuni, mis on teadupärast hommikust targem ja siis lahendada.
-Ülesande mõlemad pooled saab lahendada platsi ühekordse läbikäimisega:
-esimese poole tuvastatud detailinumbreid summeerides, teise poole jaoks hammasrattaid (*) koos neile lähedalseisvate detailidega üles lugedes.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/3&#xA;Lahendus Rumal on inimene, kes on rumal. Mul oli hommikul umbes 20 minutit selleks, et ülesanne lahendada, ja sellest oleks pidanud piisama vabalt vähemalt esimese poole jaoks, aga kui ikka ei oska mõista, et realõppu tuleb kohelda kui arvu lõpetavat sümbolit, no siis pole midagi teha. Tuleb oodata õhtuni, mis on teadupärast hommikust targem ja siis lahendada.&#xA;Ülesande mõlemad pooled saab lahendada platsi ühekordse läbikäimisega:&#xA;esimese poole tuvastatud detailinumbreid summeerides, teise poole jaoks hammasrattaid (*) koos neile lähedalseisvate detailidega üles lugedes.</description>
     </item>
     <item>
       <title>AoC 2023, 2. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-02/</link>
       <pubDate>Sat, 02 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-02/</guid>
-      <description>Ülesanne Siin: https://adventofcode.com/2023/day/2
-Lahendus Suuresti on tegu ülesandega, mis taandub sisendi parsimisele, seega ei oskagi suurt midagi kommenteerida. Ühtlasi tundun olevat ka maailma mastaabis päris kiire parsija:
-That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 303 on this star&#39;s leaderboard.
-That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 533 on this star&#39;s leaderboard.</description>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/2&#xA;Lahendus Suuresti on tegu ülesandega, mis taandub sisendi parsimisele, seega ei oskagi suurt midagi kommenteerida. Ühtlasi tundun olevat ka maailma mastaabis päris kiire parsija:&#xA;That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 303 on this star&#39;s leaderboard.&#xA;That&#39;s the right answer! You are one gold star closer to restoring snow operations. You got rank 533 on this star&#39;s leaderboard.</description>
     </item>
     <item>
       <title>AoC 2023, 1. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-01/</link>
       <pubDate>Fri, 01 Dec 2023 08:00:00 +0200</pubDate>
       <guid>https://fazz.github.io/posts/aoc2023/aoc2023-01/</guid>
-      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&amp;ndash;lahendustele analüüside kirjutamine on märksa raskem töö (2020 ja 2022 kurvad mälestusmärgid). Seega mis sitasti, see uuesti.
-Ülesanne Siin: https://adventofcode.com/2023/day/1
-Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.</description>
+      <description>AoC, A.D. 2023 Elu on näidanud, et AoC ülesannete lahendamine tuleb mul päris hästi välja, aga ülesannetele&amp;ndash;lahendustele analüüside kirjutamine on märksa raskem töö (2020 ja 2022 kurvad mälestusmärgid). Seega mis sitasti, see uuesti.&#xA;Ülesanne Siin: https://adventofcode.com/2023/day/1&#xA;Lahendus Päris mitmel spordialal kehtib reegel &amp;ldquo;võidab see, kes teeb kõige vähem vigu&amp;rdquo;. Nii ka siin. Ma ei hakka oma rumalaid vigu selgitama ega vabandama, aga kokku läks õnnetud 22 minutit, et tulemus kirja saada.</description>
     </item>
   </channel>
 </rss>
