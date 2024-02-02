@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reading list on The Happler</title>
+    <link>https://fazz.github.io/tags/reading-list/</link>
+    <description>Recent content in reading list on The Happler</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Feb 2024 07:00:00 +0200</lastBuildDate>
+    <atom:link href="https://fazz.github.io/tags/reading-list/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading list, January 2024</title>
+      <link>https://fazz.github.io/posts/2024-01-reading-list/</link>
+      <pubDate>Thu, 01 Feb 2024 07:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/2024-01-reading-list/</guid>
+      <description>Software engineering Towards Modern Development of Cloud Applications &amp;ndash; https://dl.acm.org/doi/10.1145/3593856.3595909 </description>
+    </item>
+  </channel>
+</rss>

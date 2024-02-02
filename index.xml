@@ -6,8 +6,22 @@
     <description>Recent content on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Dec 2023 08:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2024 07:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading list, January 2024</title>
+      <link>https://fazz.github.io/posts/2024-01-reading-list/</link>
+      <pubDate>Thu, 01 Feb 2024 07:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/2024-01-reading-list/</guid>
+      <description>Software engineering Towards Modern Development of Cloud Applications &amp;ndash; https://dl.acm.org/doi/10.1145/3593856.3595909 </description>
+    </item>
+    <item>
+      <title>AoC 2023, 13. päev</title>
+      <link>https://fazz.github.io/posts/aoc2023/aoc2023-13/</link>
+      <pubDate>Wed, 13 Dec 2023 08:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/aoc2023/aoc2023-13/</guid>
+      <description>Ülesanne Siin: https://adventofcode.com/2023/day/13&#xA;Lahendus Esimene pool Esimese poole lahendamiseks tasub appi võtta kaks lihtsat kuid tõhusat tööriista: Hammingi distants ning maatriksi transponeerimine.&#xA;Hammingi distants on ühepikkuste stringide erinevuse mõõt, mis ütleb, kui mitut positsiooni tuleks emmas-kummas stringis muuta, et stringid ühesuguseks muuta.&#xA;Lisaks tasub tähele panna, et küsitakse peegeldusjoonest üles ning peegeldusjoonest paremale jäävate ridade-veergude koguseid. Kui me kohtleme iga üksikut sisendit kui maatriksit, saab selle probleemi sõnastada kui maatriksis $A$ peegeldusjoonest ülespoole jäävate ridade arvu ja vastavas transponeeritud maatriksis $A^T$ peegeldusjoonest ülespoole jäävate ridade arvu.</description>
+    </item>
     <item>
       <title>AoC 2023, 12. päev</title>
       <link>https://fazz.github.io/posts/aoc2023/aoc2023-12/</link>

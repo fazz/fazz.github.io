@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.121.2">
-  <link rel="canonical" href="https://fazz.github.io/tags/et/">
+  <link rel="canonical" href="https://fazz.github.io/posts/aoc2023/aoc2023-13/">
 
   
 
@@ -38,7 +38,7 @@
 
   
   
-  <title>et | The Happler</title>
+  <title>AoC 2023, 13. päev | The Happler</title>
 </head>
 
   <body>
@@ -176,7 +176,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -218,372 +218,89 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>et</h1>
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      AoC 2023, 13. päev
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Dec 13, 2023
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/aoc2023/">aoc2023</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/et/">et</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="ülesanne">Ülesanne</h2>
+<p>Siin: <a href="https://adventofcode.com/2023/day/13">https://adventofcode.com/2023/day/13</a></p>
+<h2 id="lahendus">Lahendus</h2>
+<h3 id="esimene-pool">Esimene pool</h3>
+<p>Esimese poole lahendamiseks tasub appi võtta kaks lihtsat kuid tõhusat tööriista: Hammingi distants ning maatriksi transponeerimine.</p>
+<p>Hammingi distants on ühepikkuste stringide erinevuse mõõt, mis ütleb, kui mitut positsiooni tuleks emmas-kummas stringis muuta, et stringid ühesuguseks muuta.</p>
+<p>Lisaks tasub tähele panna, et küsitakse peegeldusjoonest üles ning peegeldusjoonest paremale jäävate ridade-veergude koguseid. Kui me kohtleme iga üksikut sisendit kui maatriksit, saab selle probleemi sõnastada kui maatriksis $A$ peegeldusjoonest ülespoole jäävate ridade arvu ja vastavas transponeeritud maatriksis $A^T$ peegeldusjoonest ülespoole jäävate ridade arvu. See võimaldab kasutada ülesande kahe alamosa lahendamiseks sama algoritmi, muutes vaid sisendit.</p>
+<p>Algoritm:</p>
+<ul>
+<li>Teisenda maatriks vektoriks, mille iga element on kahe kõrvutise maatriksi rea vaheline Hammingi distants.</li>
+<li>Iga $0$-väärtuse kohta uuri, kas vastavest ridade paarist üleval ja all sama kaugel olevate ridade vahel on paarikaupa Hammingi distants $0$. Kui jah, siis ongi tegu otsitava peegeldusega.</li>
+</ul>
+<p>Sisendandmed on sellised, et iga sisendi elemendi (maatriksi) ja tema transponeeritud maatriksi kohta on täpselt üks selline peegeldus, kuigi kõrvutiolevad samasuguseid ridu võib olla veel.</p>
+<h3 id="teine-pool">Teine pool</h3>
+<p>Teise poole jaoks saab esimese poole algoritmi laiendada, seejuures nii, et mõlemad pooled saab lahendada korraga. Kui aga vaadata algoritmi eraldi, siis:</p>
+<ul>
+<li>Jätka esimeses poole leitud vektoriga, ignoreerides juba leitud peegeldust.</li>
+<li>Leia selline peegeldus, mille puhul välistab esimese poole lahendiks olemise ainult üks Hammingi distants väärtusega $1$.</li>
+<li>Seejuures on vaja käsitleda erijuhtu, et peegelduspind ei ole tuvastatud mitte distantsi $0$ vaid hoopiski $1$ järgi, st. veaparandust vajav rida on vahetult peegelduspinna kõrval.</li>
+</ul>
+<p>Lahenduskäik: <a href="https://github.com/fazz/aoc/blob/master/aoc2023/day13.py">https://github.com/fazz/aoc/blob/master/aoc2023/day13.py</a></p>
+
+  </main>
+  <div id="disqus-container">
   
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
+</div>
+
+
   
-  <ul class="patterns-list" id="list">
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-13/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 13. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-12/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 12. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-11/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 11. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-10/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 10. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-09/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 9. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-08/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 8. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-07/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 7. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-06/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 6. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-05/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 5. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-04/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 4. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2023/aoc2023-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2023, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-09/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 9. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-08/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 8. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-07/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 7. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-06/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 6. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-05/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 5. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-04/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 4. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-03/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 3. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-02/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 2. päev
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a href="https://fazz.github.io/posts/aoc2022/aoc2022-01/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          AoC 2022, 1. päev
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
 
           <footer role="contentinfo">
   <div>
