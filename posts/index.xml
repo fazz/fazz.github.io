@@ -6,8 +6,15 @@
     <description>Recent content in Posts on The Happler</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Feb 2024 07:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2024 07:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading list, February 2024</title>
+      <link>https://fazz.github.io/posts/2024-02-reading-list/</link>
+      <pubDate>Fri, 01 Mar 2024 07:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/2024-02-reading-list/</guid>
+      <description>Software engineering The disaggregated write-ahead log &amp;ndash; https://blog.schmizz.net/disaggregated-wal vx-underground on the ultimate immorality of ransomware gangs Fighting Conway’s Law: The Reality of Feature Teams &amp;ndash; https://medium.com/swlh/fighting-conways-law-the-reality-of-feature-teams-9fcdf96fb1a1 </description>
+    </item>
     <item>
       <title>Reading list, January 2024</title>
       <link>https://fazz.github.io/posts/2024-01-reading-list/</link>
