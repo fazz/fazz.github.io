@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>information security on The Happler</title>
+    <title>Information Security on The Happler</title>
     <link>https://fazz.github.io/series/information-security/</link>
-    <description>Recent content in information security on The Happler</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Information Security on The Happler</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Feb 2023 08:02:01 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aoc2020 on The Happler</title>
+    <title>Aoc2020 on The Happler</title>
     <link>https://fazz.github.io/tags/aoc2020/</link>
-    <description>Recent content in aoc2020 on The Happler</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Aoc2020 on The Happler</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Dec 2020 07:25:01 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/tags/aoc2020/index.xml" rel="self" type="application/rss+xml" />

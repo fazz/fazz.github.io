@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aoc2022 on The Happler</title>
+    <title>Aoc2022 on The Happler</title>
     <link>https://fazz.github.io/series/aoc2022/</link>
-    <description>Recent content in aoc2022 on The Happler</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Aoc2022 on The Happler</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Dec 2022 09:00:00 +0200</lastBuildDate>
     <atom:link href="https://fazz.github.io/series/aoc2022/index.xml" rel="self" type="application/rss+xml" />

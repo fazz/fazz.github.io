@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="canonical" href="https://fazz.github.io/posts/2026-08-lhv-tegi-avaliku-api/" />
+
+  
+    
+    <meta name="description" content="Sissejuhatus LHV käivitas 15. juulil oma klientidele, sh eraklientidele, avaliku JSON-RPC 2.0 API.
+Esimesed internetipangad ehitati Eestis 1996. aastal, ehk siis võttis 30 aastat, et jõuda brauseri-põhisest eraisikute internetipangast API-põhise eraisikute internetipangani, seda hoolimata sellest, et meie rahvusliku IT omamüüdiks on lõputu internetilembus ning programmeerivad lasteaialapsed.
+Ah et miks te sellest API-st midagi kuulnud ei ole? Sest pressiteade ütleb midagi muud, pressiteade ütleb, et “LHV pakub nüüd esimese pangana Eestis enda klientidele võimalust ühendada pangakonto tehisintellekti tööriistadega.">
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fazz.github.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fazz.github.io/favicon-32x32.png"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fazz.github.io/favicon-16x16.png"> 
+  <link rel="manifest" href="https://fazz.github.io/site.webmanifest"> 
+  <link rel="mask-icon" href="https://fazz.github.io/safari-pinned-tab.svg" color="#000000"> 
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <style id="darkTheme">
+    .intro-and-nav,
+    .main-and-footer {
+      filter: invert(100%);
+    }
+
+    * {
+      background-color: inherit
+    }
+
+    img:not([src*=".svg"]),
+    .colors,
+    iframe,
+    .demo-container {
+      filter: invert(100%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+  
+    <link rel="stylesheet" href="/css/custom_01.css">
+  
+    <link rel="stylesheet" href="/css/custom_02.css">
+  
+
+  
+  
+  <title>LHV tegi oma klientidele avaliku JSON-RPC 2.0 API | The Happler</title>
+</head>
+
+  <body>
+    <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
+    <svg style="display: none">
+  <symbol id="bookmark" viewBox="0 0 40 50">
+   <g transform="translate(2266 3206.2)">
+    <path style="stroke:currentColor;stroke-width:3.2637;fill:none" d="m-2262.2-3203.4-.2331 42.195 16.319-16.318 16.318 16.318.2331-42.428z"/>
+   </g>
+  </symbol>
+
+  <symbol id="w3c" viewBox="0 0 127.09899 67.763">
+   <text font-size="83" style="font-size:83px;font-family:Trebuchet;letter-spacing:-12;fill-opacity:0" letter-spacing="-12" y="67.609352" x="-26.782778">W3C</text>
+   <text font-size="83" style="font-size:83px;font-weight:bold;font-family:Trebuchet;fill-opacity:0" y="67.609352" x="153.21722" font-weight="bold">SVG</text>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m33.695.377 12.062 41.016 12.067-41.016h8.731l-19.968 67.386h-.831l-12.48-41.759-12.479 41.759h-.832l-19.965-67.386h8.736l12.061 41.016 8.154-27.618-3.993-13.397h8.737z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m91.355 46.132c0 6.104-1.624 11.234-4.862 15.394-3.248 4.158-7.45 6.237-12.607 6.237-3.882 0-7.263-1.238-10.148-3.702-2.885-2.47-5.02-5.812-6.406-10.022l6.82-2.829c1.001 2.552 2.317 4.562 3.953 6.028 1.636 1.469 3.56 2.207 5.781 2.207 2.329 0 4.3-1.306 5.909-3.911 1.609-2.606 2.411-5.738 2.411-9.401 0-4.049-.861-7.179-2.582-9.399-1.995-2.604-5.129-3.912-9.397-3.912h-3.327v-3.991l11.646-20.133h-14.062l-3.911 6.655h-2.493v-14.976h32.441v4.075l-12.31 21.217c4.324 1.385 7.596 3.911 9.815 7.571 2.22 3.659 3.329 7.953 3.329 12.892z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.21 0 1.414 8.6-5.008 9.583s-1.924-4.064-5.117-6.314c-2.693-1.899-4.447-2.309-7.186-1.746-3.527.73-7.516 4.938-9.258 10.13-2.084 6.21-2.104 9.218-2.178 11.978-.115 4.428.58 7.043.58 7.043s-3.04-5.626-3.011-13.866c.018-5.882.947-11.218 3.666-16.479 2.404-4.627 5.954-7.404 9.114-7.728 3.264-.343 5.848 1.229 7.841 2.938 2.089 1.788 4.213 5.698 4.213 5.698l4.94-9.837z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.82 48.674s-2.208 3.957-3.589 5.48c-1.379 1.524-3.849 4.209-6.896 5.555-3.049 1.343-4.646 1.598-7.661 1.306-3.01-.29-5.807-2.032-6.786-2.764-.979-.722-3.486-2.864-4.897-4.854-1.42-2-3.634-5.995-3.634-5.995s1.233 4.001 2.007 5.699c.442.977 1.81 3.965 3.749 6.572 1.805 2.425 5.315 6.604 10.652 7.545 5.336.945 9.002-1.449 9.907-2.031.907-.578 2.819-2.178 4.032-3.475 1.264-1.351 2.459-3.079 3.116-4.108.487-.758 1.276-2.286 1.276-2.286l-1.276-6.644z"/>
+  </symbol>
+
+  <symbol id="tag" viewBox="0 0 177.16535 177.16535">
+    <g transform="translate(0 -875.2)">
+     <path style="fill-rule:evenodd;stroke-width:0;fill:currentColor" d="m159.9 894.3-68.79 8.5872-75.42 77.336 61.931 60.397 75.429-76.565 6.8495-69.755zm-31.412 31.835a10.813 10.813 0 0 1 1.8443 2.247 10.813 10.813 0 0 1 -3.5174 14.872l-.0445.0275a10.813 10.813 0 0 1 -14.86 -3.5714 10.813 10.813 0 0 1 3.5563 -14.863 10.813 10.813 0 0 1 13.022 1.2884z"/>
+    </g>
+  </symbol>
+
+  <symbol id="balloon" viewBox="0 0 141.73228 177.16535">
+   <g transform="translate(0 -875.2)">
+    <g>
+     <path style="fill:currentColor" d="m68.156 882.83-.88753 1.4269c-4.9564 7.9666-6.3764 17.321-5.6731 37.378.36584 10.437 1.1246 23.51 1.6874 29.062.38895 3.8372 3.8278 32.454 4.6105 38.459 4.6694-.24176 9.2946.2879 14.377 1.481 1.2359-3.2937 5.2496-13.088 8.886-21.623 6.249-14.668 8.4128-21.264 10.253-31.252 1.2464-6.7626 1.6341-12.156 1.4204-19.764-.36325-12.93-2.1234-19.487-6.9377-25.843-2.0833-2.7507-6.9865-7.6112-7.9127-7.8436-.79716-.20019-6.6946-1.0922-6.7755-1.0248-.02213.0182-5.0006-.41858-7.5248-.22808l-2.149-.22808h-3.3738z"/>
+     <path style="fill:currentColor" d="m61.915 883.28-3.2484.4497c-1.7863.24724-3.5182.53481-3.8494.63994-2.4751.33811-4.7267.86957-6.7777 1.5696-.28598 0-1.0254.20146-2.3695.58589-5.0418 1.4418-6.6374 2.2604-8.2567 4.2364-6.281 7.6657-11.457 18.43-12.932 26.891-1.4667 8.4111.71353 22.583 5.0764 32.996 3.8064 9.0852 13.569 25.149 22.801 37.517 1.3741 1.841 2.1708 2.9286 2.4712 3.5792 3.5437-1.1699 6.8496-1.9336 10.082-2.3263-1.3569-5.7831-4.6968-21.86-6.8361-33.002-.92884-4.8368-2.4692-14.322-3.2452-19.991-.68557-5.0083-.77707-6.9534-.74159-15.791.04316-10.803.41822-16.162 1.5026-21.503 1.4593-5.9026 3.3494-11.077 6.3247-15.852z"/>
+     <path style="fill:currentColor" d="m94.499 885.78c-.10214-.0109-.13691 0-.0907.0409.16033.13489 1.329 1.0675 2.5976 2.0723 6.7003 5.307 11.273 14.568 12.658 25.638.52519 4.1949.24765 14.361-.5059 18.523-2.4775 13.684-9.7807 32.345-20.944 53.519l-3.0559 5.7971c2.8082.76579 5.7915 1.727 8.9926 2.8441 11.562-11.691 18.349-19.678 24.129-28.394 7.8992-11.913 11.132-20.234 12.24-31.518.98442-10.02-1.5579-20.876-6.7799-28.959-.2758-.4269-.57803-.86856-.89617-1.3166-3.247-6.13-9.752-12.053-21.264-16.131-2.3687-.86369-6.3657-2.0433-7.0802-2.1166z"/>
+     <path style="fill:currentColor" d="m32.52 892.22c-.20090-.13016-1.4606.81389-3.9132 2.7457-11.486 9.0476-17.632 24.186-16.078 39.61.79699 7.9138 2.4066 13.505 5.9184 20.562 5.8577 11.77 14.749 23.219 30.087 38.74.05838.059.12188.1244.18052.1838 1.3166-.5556 2.5965-1.0618 3.8429-1.5199-.66408-.32448-1.4608-1.3297-3.8116-4.4602-5.0951-6.785-8.7512-11.962-13.051-18.486-5.1379-7.7948-5.0097-7.5894-8.0586-13.054-6.2097-11.13-8.2674-17.725-8.6014-27.563-.21552-6.3494.13041-9.2733 1.775-14.987 2.1832-7.5849 3.9273-10.986 9.2693-18.07 1.7839-2.3656 2.6418-3.57 2.4409-3.7003z"/>
+     <path style="fill:currentColor" d="m69.133 992.37c-6.2405.0309-12.635.76718-19.554 2.5706 4.6956 4.7759 9.935 10.258 12.05 12.625l4.1272 4.6202h11.493l3.964-4.4516c2.0962-2.3541 7.4804-7.9845 12.201-12.768-8.378-1.4975-16.207-2.6353-24.281-2.5955z"/>
+     <rect style="stroke-width:0;fill:currentColor" ry="2.0328" height="27.746" width="22.766" y="1017.7" x="60.201"/>
+    </g>
+   </g>
+  </symbol>
+
+  <symbol id="info" viewBox="0 0 41.667 41.667">
+   <g transform="translate(-37.035 -1004.6)">
+    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
+    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+   </g>
+  </symbol>
+
+  <symbol id="warning" viewBox="0 0 48.430474 41.646302">
+    <g transform="translate(-1.1273 -1010.2)">
+     <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+  </symbol>
+
+  <symbol id="menu" viewBox="0 0 50 50">
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="0" x="0"/>
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="20" x="0"/>
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="40" x="0"/>
+   </symbol>
+
+   <symbol id="link" viewBox="0 0 50 50">
+    <g transform="translate(0 -1002.4)">
+     <g transform="matrix(.095670 0 0 .095670 2.3233 1004.9)">
+      <g>
+       <path style="stroke-width:0;fill:currentColor" d="m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z"/>
+      </g>
+     </g>
+    </g>
+  </symbol>
+
+  <symbol id="doc" viewBox="0 0 35 45">
+   <g transform="translate(-147.53 -539.83)">
+    <path style="stroke:currentColor;stroke-width:2.4501;fill:none" d="m149.38 542.67v39.194h31.354v-39.194z"/>
+    <g style="stroke-width:25" transform="matrix(.098003 0 0 .098003 133.69 525.96)">
+     <path d="m220 252.36h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+     <path style="stroke:currentColor;stroke-width:25;fill:none" d="m220 409.95h200"/>
+     <path d="m220 488.74h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+     <path d="m220 331.15h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+    </g>
+   </g>
+ </symbol>
+
+ <symbol id="tick" viewBox="0 0 177.16535 177.16535">
+  <g transform="translate(0 -875.2)">
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
+  </g>
+ </symbol>
+</svg>
+
+    <div class="wrapper">
+      <header class="intro-and-nav" role="banner">
+  <div>
+    <div class="intro">
+      <a
+        class="logo"
+        href="https://fazz.github.io/"
+        aria-label="The Happler home page"
+      >
+        
+          <img 
+            src="/images/logo.svg" 
+            alt="Logo"
+          >
+        
+      </a>
+      <p class="library-desc">
+         It&rsquo;s complicated. 
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/posts/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use href="#bookmark"></use>
+        </svg>
+        <span class="text">Blog</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/tags/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use href="#bookmark"></use>
+        </svg>
+        <span class="text">Tags</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/about/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use href="#bookmark"></use>
+        </svg>
+        <span class="text">About</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/index.xml" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use href="#bookmark"></use>
+        </svg>
+        <span class="text">RSS</span>
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+    
+  </div>
+</header>
+
+      <div class="main-and-footer">
+        <div>
+          
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      LHV tegi oma klientidele avaliku JSON-RPC 2.0 API
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Aug 3, 2026
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/et/">et</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/digiriik/">digiriik</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/infoturve/">infoturve</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/ai/">ai</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://fazz.github.io/tags/dem%C3%BCstifikatsioon/">demüstifikatsioon</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+      
+  <nav class="toc" aria-labelledby="toc-heading">
+    <strong id="toc-heading">Table of Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sissejuhatus">Sissejuhatus</a></li>
+    <li><a href="#json-rpc-20">JSON-RPC 2.0</a></li>
+    <li><a href="#model-context-protocol">Model Context Protocol</a></li>
+    <li><a href="#mcp-isikutuvastus-ja-volitamine">MCP, isikutuvastus ja volitamine</a></li>
+    <li><a href="#jah-aga">Jah, aga?</a>
+      <ul>
+        <li><a href="#demüstifikatsioon">Demüstifikatsioon</a></li>
+        <li><a href="#ja-siis-see-teine-teema">Ja siis see teine teema</a></li>
+      </ul>
+    </li>
+    <li><a href="#mida-teha-üritatakse-kui-pakutakse-välja-et-ai-agentidele-tuleb-anda-isikukoodid">Mida teha üritatakse, kui pakutakse välja, et AI-agentidele tuleb anda isikukoodid?</a>
+      <ul>
+        <li><a href="#variant-a-masinal-on-isikukood">Variant A: masinal on isikukood</a></li>
+        <li><a href="#vahemäng-rain-lõhmus-tordisööjaid-ei-palka">Vahemäng: Rain Lõhmus tordisööjaid ei palka</a></li>
+        <li><a href="#variant-b-teeme-x-tee-otsa-mcp-konverteri">Variant B: teeme X-tee otsa MCP konverteri</a></li>
+        <li><a href="#variant-c-seesama-mis-eelmine-aga-seda-teeb-erasektor">Variant C: seesama mis eelmine, aga seda teeb erasektor</a></li>
+      </ul>
+    </li>
+    <li><a href="#kokkuvõtteks">Kokkuvõtteks</a></li>
+    <li><a href="#kartaago-tuleb-hävitada">Kartaago tuleb hävitada</a></li>
+  </ul>
+</nav>
+  </nav>
+
+
+    
+
+    <h1 id="sissejuhatus">Sissejuhatus</h1>
+<p>LHV käivitas 15. juulil oma klientidele, sh eraklientidele, avaliku JSON-RPC 2.0 API.</p>
+<p>Esimesed internetipangad ehitati Eestis 1996. aastal, ehk siis võttis 30 aastat, et jõuda brauseri-põhisest eraisikute internetipangast API-põhise eraisikute internetipangani, seda hoolimata sellest, et meie rahvusliku IT omamüüdiks on lõputu internetilembus ning programmeerivad lasteaialapsed.</p>
+<p>Ah et miks te sellest API-st midagi kuulnud ei ole? Sest pressiteade ütleb midagi muud, pressiteade ütleb, et &ldquo;LHV pakub nüüd esimese pangana Eestis enda klientidele võimalust ühendada pangakonto tehisintellekti tööriistadega.&rdquo;</p>
+<h1 id="json-rpc-20">JSON-RPC 2.0</h1>
+<p><a href="https://www.jsonrpc.org/specification">JSON-RPC 2.0</a> on kena väike raamistik RPC API-de koostamiseks. Kindlasti mitte ideaalne ja igasse olukorda sobiv, aga 95% kasutusjuhtude jaoks ühendab ta OpenAPI ja gRPC parimad omadused. Temal on ainult üks väike viga, nimelt võttis OpenAPI (et ta iseendale kurku kinni jääks) ühe või teise ajaloolise keerdkäigu tõttu kogu tähelepanu ja turuosa. Ja seetõttu ongi JSON-RPC ilus, aga ilma suurema hulga vajalike tööriistade ja muu ökosüsteemita.</p>
+<p>Sellest hoolimata vaatasin ma kümmekond aastat tagasi lakke, lasin vilet ja otsustasin, et saagu nii, et üks popp tükk Eesti e-ühiskonnast jookseb suuresti JSON-RPC peal (tulenevalt liideste semantikast oleks OpenAPI olnud selle koha peal õudus kuubis).</p>
+<p>Võimalik, et oli vale valik (ennekõike sellesama tööriistade puuduse tõttu), kuniks astus lavale MCP, <em>Model Context Protocol</em>.</p>
+<h1 id="model-context-protocol">Model Context Protocol</h1>
+<p><a href="https://modelcontextprotocol.io/docs/learn/architecture"><em>Model Context Protocol</em> (MCP)</a> on oma olemuselt lihtsamapoolne konventsioon selle kohta, kuidas kasutada JSON-RPCd selleks, et liidestada omavahel LLMe (õigemini mingit LLMi ümber olevat agenti või rakist) ja väliseid infosüsteeme.</p>
+<p>Selles konventsioonis on mõned nüansid, mis (väidetavalt) teevad tema kasutamise LLMide liidestamiseks eriti sobivaks, aga selles kõiges pole midagi eriti erilist.</p>
+<p>Järgnev on näide sellest, kuidas üle MCP LHV panga käest oma kontojääki küsida (pildil ei ole HTTP päiseid koos pääsutokeniga, sellest edaspidi).</p>
+<pre><code class="language-JSON">----- Client &gt;&gt; MCP server -----
+{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;method&quot;: &quot;tools/call&quot;,
+  &quot;params&quot;: {
+    &quot;name&quot;: &quot;get_balances&quot;,
+    &quot;arguments&quot;: {
+      &quot;iban&quot;: &quot;EE50XXXXXXXXXXXXXXXX&quot;
+    }
+  },
+  &quot;id&quot;: 2
+}
+---------------------------------------
+
+----- Client &lt;&lt; MCP server -----
+{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 2,
+  &quot;result&quot;: {
+    &quot;content&quot;: [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;text&quot;: &quot;{\&quot;balances\&quot;:[{\&quot;iban\&quot;:\&quot;EE50XXXXXXXXXXXXXXXX\&quot;,\&quot;availableBalance\&quot;:1234.56,\&quot;settledBalance\&quot;:1234.56,\&quot;reservedBalance\&quot;:0.00,\&quot;currency\&quot;:\&quot;EUR\&quot;}],\&quot;error\&quot;:null,\&quot;success\&quot;:true}&quot;
+      }
+    ],
+    &quot;isError&quot;: false
+  }
+}
+---------------------------------------
+</code></pre>
+<p>Tõsi, siin on mõned nüansid, näiteks see, et kusagil ei ole kirjas, mis asi on <code>availableBalance</code> &ndash; on see sentides (hästi tavaline pangasüsteemides) või eurodes? On eeldus, et väli <code>text</code> antakse tervikuna LLMile närida ning LLM siis tuletab sealt ise, mis vaja, ka siis, kui see liides peaks iga päev muutuma. Paraku ütleb <a href="https://www.hyrumslaw.com/">Hyrumi seadus</a>, et kui üks asi on ükskord juba kirja pandud, siis peab ta nii jääma, ehk siis seda liidest võib üsna rahulikult käsitleda ka tavalise API-na, tuletades vajalike kohtade peal puuduva semantika ise. Ei ole &ldquo;korrektne&rdquo;, aga töötab.</p>
+<h1 id="mcp-isikutuvastus-ja-volitamine">MCP, isikutuvastus ja volitamine</h1>
+<p>Mõistagi ei taha me, et iga internetiühendusega tont saaks meie kontojääke näha ja selleks on vaja API poole pöörduja kuidagi tuvastada.</p>
+<p>MCP näeb selleks ette täiesti standardse meetodi: <a href="https://modelcontextprotocol.io/docs/tutorials/security/authorization">OAuth koos mõnede lisavidinatega</a>. <em>Ääremärkus: kes iganes selle viidatud dokumendi kirjutas, ei peaks selliseid dokumente kirjutama. Ta ajab sassi autentimise ja volitamise ning kirjeldab täiesti tõsimeeli, et &ldquo;turvameetmeid tuleb rakendada, kui nii on kombeks&rdquo;. See on üks ebameeldiv tõdemus, et haibilainel sõitev AI-sektor ning pädev infoturve ei ole senimaani üksteist tantsule palunud.</em></p>
+<p>LHV realiseerib selle kõik üsna kaunisti.</p>
+<ol>
+<li><em>well-known</em> ressurss, mis kirjeldab, kuidas autentimine toimuma peaks: <a href="https://mcp.lhv.ai/.well-known/oauth-protected-resource/mcp">https://mcp.lhv.ai/.well-known/oauth-protected-resource/mcp</a></li>
+<li>OAuth <em>authorization server</em>: <a href="https://auth.lhv.ai">https://auth.lhv.ai</a> &ndash; muuseas veidi bugine, aga las see praegu jääb. Interaktiivne kasutajaliides, kus kasutaja (füüsiline isik) saab ennast autentida, et OAuth kliendile (agendile) väljastataks asjakohased mandaadid.</li>
+<li>Kasutusel on autentimata <a href="https://datatracker.ietf.org/doc/html/rfc7591">OAuth 2.0 Dynamic Client Registration Protocol</a>, ehk siis maakeeli: iga internetiühendusega tont saab endale LHV MCP süsteemis OAuth kliendi registreerida (klassikalises mudelis on see terve eraldi protseduur). Ega agentidega palju muud moodi ei saakski.
+<ul>
+<li>Olgu siis selle koha peal selgitatud, et puhttehnilises mõttes on &ldquo;kliendi registreerimine&rdquo; ekvivalentne &ldquo;agendile isikukoodi väljastamisega&rdquo;. Masinale või protsessile tekib unikaalne identifikaator.</li>
+</ul>
+</li>
+<li>Pärast õnnestunud autentimist tehakse veebilehitsejas tavaline HTTP ümbersuunamine, mille tulemusena saab agent kätte OAuth <em>authorization code</em> ning selle alusel <em>access tokeni</em> ja <em>refresh tokeni</em>.</li>
+<li>Sealt edasi jätkub juba tavaline MCP kasutus, mille käigus on saadud <em>access token</em> kasutusel kui <em>bearer token</em>. Liida oma AI agenti, või kasuta Pythoni skriptist. Lisaks lühiajalisele <em>access tokenile</em> on kasutusel ka pikaajaline <em>refresh token</em>, mis võimaldab agendil toimetada pikemat aega, ilma et kasutaja peaks ennast uuesti autentima.</li>
+</ol>
+<p>JWT kujul antud <em>access tokeni</em> keha on selline:</p>
+<pre><code class="language-JSON">{
+  &quot;sub&quot;: &quot;7XXXXX:2XXXXX&quot;,
+  &quot;auth_id&quot;: &quot;07337f4b-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
+  &quot;auth_level&quot;: &quot;STRONG&quot;,
+  &quot;iss&quot;: &quot;https://auth.lhv.ai&quot;,
+  &quot;display_name&quot;: &quot;OÜ ABCDEFG&quot;,
+  &quot;aud&quot;: &quot;https://mcp.lhv.ai/mcp&quot;,
+  &quot;nbf&quot;: 1784804673,
+  &quot;user_id_authorized&quot;: 2XXXXX,
+  &quot;user_id_role&quot;: 7XXXXX,
+  &quot;scope&quot;: [
+    &quot;accounts:read&quot;,
+    &quot;transactions:read&quot;
+  ],
+  &quot;module_name&quot;: &quot;SID&quot;,
+  &quot;exp&quot;: 1784805573,
+  &quot;iat&quot;: 1784804673,
+  &quot;jti&quot;: &quot;83a7aa12-fec7-4082-bfd4-629ed98cbf77&quot;
+}
+</code></pre>
+<p>On oluline märkida, et selline token väljastatakse, kui eraisik autendib ennast pangale ja soovib esindada mingit teist isikut, antud juhul üht OÜ-d. Sellest edaspidi.</p>
+<h1 id="jah-aga">Jah, aga?</h1>
+<p>Ehk siis miks see oluline on? Tegivad beeta-teenusena ühe API või MCP serveri, mis sellest siis on? Mõnel põhjusel.</p>
+<h2 id="demüstifikatsioon">Demüstifikatsioon</h2>
+<p>Suurem osa sellest, millest praegune populaarne &ldquo;AI&rdquo; kokku käib, on üsna tavaline ja kusagilt mujalt pärit ning on oluline lõpetada selle kõige müstifitseerimine. (Igaks juhuks ütlen: LHV-le siin midagi pahaks panna ei saa, nende pressiteade peabki olema kirjutatud zeitgeisti arvestades.)</p>
+<ul>
+<li>MCP on JSON-RPC rakendamise konventsioon.</li>
+<li>&ldquo;Agendid&rdquo; on skriptid, mis tegelevad LLMide ja muu maailma vahelise liidestusega.</li>
+<li>Hiljutise HuggingFace/OpenAI intsidendi juures räägiti enneolematust AI juhitud <em>command-and-control</em> struktuurist, aga kes on tähelepanu pööranud, teab, et <a href="https://www.sciencedirect.com/science/article/abs/pii/S1084804513001161">päris rajusid süsteeme ehitati kaugelt üle 10 aasta tagasi</a> (ja Skype P2P, khm, khm).</li>
+<li>LLMide enda muljetavaldavamad omadused tulenevad nende suurusest. <a href="https://uttv.ee/naita?id=29281">Transformer-mudelitele omased huvitavad emergentsed omadused olid ammu teada</a>, suurus võimendab neid.</li>
+<li>Jne.</li>
+</ul>
+<p>Natuke meenutab see mõne hea aasta tagust juttu, kuidas &ldquo;pilv ja API&rdquo; kõik üle võtavad, aga päeva lõpuks selgus ikka, et &ldquo;pilv&rdquo; on kellegi teise kallis arvuti ning &ldquo;API&rdquo; ükskõik mis kokkukäkitud integratsioon, mis kellelgi kuidagi parasjagu välja tuleb. Nagu ennegi.</p>
+<p>Mis ei tähenda, et päriselt suur LLM ei oleks muljetavaldav saavutus või et &ldquo;pilv&rdquo; ei oleks paradigmanihet tekitanud. Aga jätkem müstifikatsioonid müstikutele ja olgem insenerid.</p>
+<p>Kui me tahame olla &ldquo;maailma kõige targem majaehitaja rahvas&rdquo; (vrdl: &ldquo;kõige AI-targem rahvas&rdquo;), ei saa me leppida Soome kataloogidest pärit majade ostmisega, vaid tuleb ise õppida ära vähemalt see, kuidas maju ehitatakse, isegi kui kõiki materjale ise toota ei suuda (vrdl: ei saa sõita selle seljas, mida AI-müügiinimesed meile räägivad, vaid tuleb ise debuger kätte võtta ning ka mõtlemise värgendust rakendada).</p>
+<h2 id="ja-siis-see-teine-teema">Ja siis see teine teema</h2>
+<p>LHV MCP server on päris tore kaasus, mille pealt mõtelda, mida kogu selle &ldquo;AI-agentidele isikukoodid&rdquo; ideega peale hakata. Seda eriti seetõttu, et plaani õigustavates tekstides on siin ja seal LHV nimi läbi käinud kui võimalik näite-kaasus, aga paradoksaalsel kombel räägib, vähemalt minumeelest, nende tore MCP-projekt kõigele sellele otse vastu.</p>
+<p>Aga natuke tuleb alustada sellest, mida ma olen teada saanud selle kohta, kust see idee pärit on ja miks seda tegema peaks. Igaks juhuks ma kellelegi ei viita, sest kõik see on juba minu enda seeditud arusaam.</p>
+<h1 id="mida-teha-üritatakse-kui-pakutakse-välja-et-ai-agentidele-tuleb-anda-isikukoodid">Mida teha üritatakse, kui pakutakse välja, et AI-agentidele tuleb anda isikukoodid?</h1>
+<p>Kui hästi laia pintsliga tõmmata, siis:</p>
+<ul>
+<li>On vaja teha nii, et eraisikute (sh e-residentide) agendid saaks riigi ja ka eraettevõtete infosüsteemides mingit (esialgu väga piiratud hulka) toiminguid teha. Aus soov. Miks esimene internetipanga API 30 aastat aega võttis, ei tea (kuigi oskan oletada).</li>
+<li>Sama aus on eeldus, millega arvestatakse: riigi IT-süsteemides kogu selle asja &ldquo;korralikult&rdquo; realiseerimine võtaks asjade praeguse seisu juures lõpmatult palju aega ja raha või et siis lausa natukene rohkem.</li>
+<li>Siiski on mõte, et kusagil peab olema mingi <em>capability based access control</em>, et saaks näiteks öelda, et &ldquo;mingi kapitaalne viga on, ükski agent täna pangatehinguid teha ei saa&rdquo;. Ehk siis mingi keskne juhtimismehhanism.</li>
+<li>On oluline, et rõhk on ärikasutusel: ei ole kuigi tähtis, vähemalt esialgu, et füüsiline isik saaks volitada oma agenti mingeid füüsilise isiku asju tegema. Ja sellel mündil on teine külg: juriidiliste isikute käsitlus infosüsteemides on reeglina selline, et seal juba on mingi õiguste delegeerimine füüsilistele isikutele &ndash; seega on eeldus, et füüsilise isiku moodi AI-agendi haldamine sellises süsteemis oleks üsna lihtne.</li>
+<li>Samal ajal paistab kusagil silmapiiril kiirelt lähenev rahvusvaheline konkurents e-residentsuse osas, mis juba ka agentide liidestamist hõlmab. Väidetavalt tegelevad sellega kõik maailma suuremad äri-tõmbekeskused.</li>
+<li>Kasu prognoositakse sellest kahekülgset: riigilõivud teenuse avamise eest ning üldine majandustegevuse elavdamine koos kõige kaasnevaga.</li>
+</ul>
+<p>Selle juures on vaja lahendada mõned tehnilised probleemid (mittetäielik nimekiri):</p>
+<ul>
+<li>Kuidas agent autentida?</li>
+<li>Kuidas teisendada agendi esitatud mingisugune mandaat füüsilise isiku identiteediks ning õigusteks ja volitusteks?</li>
+<li>Kuidas agent süsteemidega liidestub?</li>
+</ul>
+<h2 id="variant-a-masinal-on-isikukood">Variant A: masinal on isikukood</h2>
+<p>Alustame lihtsamast, ehk siis agendi mandaadist. Seda on sellises mudelis tõesti päris lihtne lahendada: tekitame rahvastikuregistrisse seose, samalaadselt nagu näiteks lapse ja vanema vahel. Ilmselt peaks see seos olema ka transitiivne, ehk siis minu agent võib esindada ka minu last, aga see on juba detail.</p>
+<p>Volituste süsteemi kontekstis tekib siin aga kohe esimene küsimus, mis igal kogenud arhitektil kõrvad murelikult liikuma paneb: meil tekib küllalt keerukas kolmnurk füüsilise isiku õigustest, sellest mida agent füüsilist isikut esindades teha võib ning millised kirjed võivad olla volituste süsteemis volituste objekti ja agendi otseste suhete kohta (kuivõrd agent &ldquo;näeb välja&rdquo; nagu füüsiline isik). Nende kolme õla vahel võivad esineda fundamentaalsed konfliktid. Siin tuleb mängu üks vana tõdemus, nimelt et <strong>ühe asja kasutamine mitmeks otstarbeks on tarkvara maailmas üks tavalisemaid pahanduste allikaid</strong>. Kui meil on mingi &ldquo;isik&rdquo;, kes saab olla ainult volitatav ning kellel ei ole isiklikku õiguslikku staatust, siis peaks ta kuuluma täiesti omaette klassi, teda ei tohiks identifitseerida samamoodi kui füüsilist isikut, kes võib olla nii volitatav kui volitaja. <a href="https://functional-architecture.org/make_illegal_states_unrepresentable/">Süsteemi struktuur ei tohiks võimaldada olekuid, mis on nonsenss.</a></p>
+<ul>
+<li>Ärge palun pakkuge välja, et &ldquo;üheksa isikukoodi alguses on eristaja&rdquo;. Identifikaatoritesse mingite eritähendusega positsioonide sissekirjutamine on ka halb mõte ja jah, see kehtib ka tänase isikukoodi vormingu kohta. Pidagem meeles, et see on pärit NSVL-ist, kus &ldquo;privaatsus&rdquo; oli tundmata mõiste. <a href="https://maailm.postimees.ee/4166321/lati-loobub-isikukoodides-sunniaja-markimisest">Lätlased ravisid selle lastehaiguse endal välja</a>.</li>
+</ul>
+<p>Kuidas agent süsteemiga liidestub? On suur eeldus, et isikukood lihtsustab asju. Kogu tänane praktiline liidestumine infosüsteemidesse töötab mingil viisil HTTP baasil, seega peame tegema eelduse, et meil on mingi HTTP-põhine liidestus. On oluline tähele panna, et HTTP kasutus liidestusteks sõltub olulisel määral sellest, kuidas seda liidestust kasutatakse: inimkasutuseks mõeldud veebibrauserite HTTP kasutusel ja HTTP-põhistel masin-masin API liidestustel on märkimisväärsed erinevused. Kas me seame eesmärgiks, et agent on rohkem nagu masin või hoopis rohkem nagu inimene? Eeldame, et rohkem nagu inimene, sest ainult see variant kannaks edasi ideed, et meil on võimalik olemasoleva infrastruktuuri baasil midagi lihtsasti saavutada. Sobib &ndash; panna AI-agent ekraanikaabitsuse abil inimest simuleerima on suhteliselt lihtne, kui vaja, võtame mõnest kohast CAPTCHA ära.</p>
+<p>Me oskame nüüd volitada ja oskame liidestada, aga kuidas me agenti, kes käitub nagu inimene, autendime?</p>
+<p>Eesti eID süsteemis (hõlmates ka e-residente) autenditakse inimesi ühel kolmest viisist: ID-kaart (digi-ID), Mobiil-ID või Smart-ID. Kusagilt on tulemas ka digikukkur. Füüsiline kaart ei ole agentide kontekstis ilmselt üldse teemaks, Mobiil-ID samal põhjusel (SIM!) ka mitte, seega jääks üle Smart-ID (teatud modifikatsioonidega) ja mingid hüpoteetilised uued variandid, näiteks mingi <em>soft token</em>, mis simuleerib ID-kaarti. Lisaks võib midagi kunagi tekkida digikukru-maailmas. Ja räägime hetkel ainult autentimisest, ärme räägime digiallkirja andmisest. Smart-ID modifitseerimine nõuaks, et üks eraettevõte hakkab oma (rangelt sertifitseeritud ja reguleeritud) teenust oluliselt muutma ning <em>soft token</em> nõuab, et riik oleks üldse nõus sellist asja tunnustama, paraku ei ole tugevate autentimisvahendite tunnustamine päris niisama et &ldquo;tahame ja teeme&rdquo;. Aga oletame, et me saame sellega kuidagi hakkama.</p>
+<p>Saime järgneva:</p>
+<ul>
+<li>Erikujulise isikukoodi, mida hallatakse rahvastikuregistris, koos seosega &ldquo;omanikule&rdquo;.</li>
+<li>Volituste süsteemi, millest osa on rahvastikuregistris, osa aga kusagil teenusepakkujate (nii avalike kui eraõiguslike) juures.</li>
+<li>Erilise autentimisvahendi, mis simuleerib inimeste poolt kasutatavaid.</li>
+<li>Liidestuse, mis simuleerib inimkasutust.</li>
+<li>See kõik, peale autentimisvahendi, kõlab tegelikult päris lihtsasti lahendatavana, vähemalt seni, kuni me eirame kõiki teiseseid efekte, mis sellest tulenevad.</li>
+</ul>
+<p>Aga probleem on selles, et see kõik on kohmakas ja eripärane ning ei täida sugugi seda eesmärki, mida sellest loodetakse, eriti e-residentsuse kontekstis.</p>
+<h2 id="vahemäng-rain-lõhmus-tordisööjaid-ei-palka">Vahemäng: Rain Lõhmus tordisööjaid ei palka</h2>
+<p>LHV tundub endiselt veidi olevat säherdune käbeda mentaliteediga organisatsioon, nagu kunagi oli Hansapank (kuigi muremärgid on õhus) ja vähemalt osaliselt selle tulemusena ongi meil selline MCP server, nagu eespool kirjeldatud.</p>
+<hr>
+<p><em>Kui Sa siiamaani lugeda viitsisid, tunnistan üles: postituse pealkiri on puhas trollimine ja provokatsioon. Nad ei teinud API-t, nad tegid MCP serveri.</em></p>
+<hr>
+<p>Mõned täiendused tolle MCP-serveri varasema kirjelduse juurde.</p>
+<p>Kui vaadata enne näidatud JWT tokenit, siis on seal näha kaks väärtust: <code>7XXXXX</code> ja <code>2XXXXX</code>.</p>
+<p><code>2XXXXX</code> on autenditud füüsilise isiku tunnus. See ei ole isikukood.</p>
+<p><code>7XXXXX</code> on füüsilise isiku poolt esindatava OÜ tunnus. See ei ole äriregistri kood.</p>
+<p>Liides kasutab isikute identifitseerimiseks mingit pangasisest identifikaatorite süsteemi, mis on riiklikest identifikaatoritest lahti ühendatud, aga õigupoolest on see rohkem lokaalse tähtsusega projekteerimisotsus, mismoodi parasjagu parem teha on. Riigi infosüsteemides on pigem mõistlik kasutada isikukoodi.</p>
+<p>Lisaks on seal tokenis veel kaks välja: <code>auth_id</code> ja <code>jti</code>. Need on vastavalt autentimisprotsessi ID ja tokeni ID. Need on täpselt need väljad, mille abil agent üheselt algse isiku külge siduda, selle asemel et minna rahvastikuregistrisse pseudoisikuid looma. Jälg sellest, millises protsessis need identifikaatorid väljastati, jääb kuhugi maha ja on leitav.</p>
+<p>Saime järgneva:</p>
+<ul>
+<li>Mingit isikukoodi ei ole. Isegi äriregistri koodi ega inimeste isikukoodi ei kasutada. Viisakas, <em>decoupling</em> on hea.</li>
+<li>Volituste süsteemi, mis arvatavasti põhineb äriregistri andmetel, võimalik et ka panga sisemisel volituste süsteemil (ei ole süvenenud, ei ole ka liiga oluline siinkohal).</li>
+<li>Volituste süsteemi peal on lisakiht, mis läbi OAuthi skoopide mehhanismi deklareerib avalikult, et agendil on kindlal viisil piiratud õigused võrreldes inimesega, kellele ta kuulub.</li>
+<li>Täiesti standardse autentimisviisi, mis läbi standardsete mehhanismide suunatakse kohta, kus inimene saab kohalikke eripärasid (Smart-ID jms) rakendada (<a href="https://auth.lhv.ai/">https://auth.lhv.ai/</a>). Masinale pole vaja kohalikke eripärasid tutvustada.</li>
+<li>AI/LLM-süsteemidele loomuliku masinliidestuse.</li>
+</ul>
+<p>Selle juures on üks nüanss, mida tasub tähele panna: ma ütlesin Claude Code&rsquo;le ühe või kahe lausega, et tee mulle Pythoni skript, mis realiseerib selle MCP serveri kliendi. Ja ta tegi, esimese korraga, ilma ühegi tuvastatava veata, ning vahepeal ekraanile pritsitud &ldquo;arutlemine&rdquo; viitas kõik sellele, et mudelisse on kogu sellealane tarkus sisse treenitud.</p>
+<p>On üks asi, mida ma olen väheortodoksse tehnikuna hindama õppinud: ära kunagi uju vastuvoolu, kui üks asi on juba voolama pandud. Kui meil on AI-maailmas olemas MCP, mis rakendab turvameetmena OAuthi, siis see on see, mille järgi tuleb joonduda. Muidu on võimalus kulutada palju aega, palju raha ning saada mitte midagi. Äge kohalik eripära on kiluvõileib, kodukootud autentimisprotokoll ei ole äge.</p>
+<hr>
+<p><em>On täiesti omaette küsimus, kui hea või halb on MCP spetsifikatsioonina, aga sellest tähtsam on see, et ta on olemas ja kasutatav. Minu rangelt isiklik seisukoht on, et MCP tänasel kujul on päris ohtlik plönn, kasvõi sellepärast, millise kvaliteediga on nende juba mainitud dokumentatsioon.</em></p>
+<hr>
+<p>Lähme korraks eesmärgi juurde tagasi: see asi peab olema kasutatav välismaistele e-residentidele. Kiipkaardiga digi-ID ja muud veidrused on nende jaoks rohkem probleem kui võimalus (vaadake pidevaid probleeme meie DigiDoci kvaliteedi ja ühilduvusega ning ekstrapoleerige). Kui meil on eesmärgiks palju välismaiseid agente, tuleb teha nagu välismaal ning välismaal on MCP ja OAuth.</p>
+<p>Lisanüanss: ka LHV pakub liidestusvariantidena välja LLMi-pakkujate veebiliidesed. See on tähtis, sest kui mingitele laua alla Mac Mini sisse punutud agentidele on võimalik kohalikke autentimisvahendeid selgitada, siis palju õnne, kui tahate sama Anthropicu hostitava agendiga teha.</p>
+<p>Mida me sellest siis järeldame?</p>
+<h2 id="variant-b-teeme-x-tee-otsa-mcp-konverteri">Variant B: teeme X-tee otsa MCP konverteri</h2>
+<p>Kõlab brutaalselt, aga päriselt ka. (Konverteri, mitte sügavalt integreeritud MCP toe, sest on usutav, et kui see agendimöll ei sure, siis tuleb MCP asemele midagi paremat.)</p>
+<p>Seal on miljon pisiasja, mille peale tuleb mõtelda, see ei tule päris ilma projekteerimata kätte, aga me saame päris mitu toredat tulemit:</p>
+<ul>
+<li>Liidestus on AI agentidele loomulik.</li>
+<li>Autentimine on masin-masin autentimise maailmale loomulik.</li>
+<li>Volituste piiramine on standardsel viisil sisse ehitatud.
+<ul>
+<li>See EI tähenda, et volitamine kui selline oleks standardsel viisil sisse ehitatud - ühtegi päriselt standardset volitamise raamistikku ei ole olemas, sellega tuleb igal juhul tegeleda. Aga OAuth annab läbi skoopide mehhanismi võimaluse tekitada agendile simese taseme &ldquo;kaelarihm&rdquo;.</li>
+</ul>
+</li>
+<li>Eripärane kohalik autentimine on lokaliseeritud kasutajaliidesesse.</li>
+<li>Me ei lähe alusmüüre raputama mingi haibiga, mis võib olla 8-18 kuu pärast pildilt kadunud.</li>
+<li>Eelmine tähendab seda, et meil ei ole &ldquo;agentide isikukoode&rdquo;, sest vajalikule tulemusele on võimalik jõuda lihtsamalt ja standardsemalt.</li>
+</ul>
+<hr>
+<p><em>Kust ma võtan 8-18 kuud? Sõltumata sellest, kust arvama hakata, on kogu see AI-agendi teema väga-väga värske ning <a href="https://en.wikipedia.org/wiki/Lindy_effect">Lindy reegel</a> ütleb meile, et tehnoloogia elab keskeltläbi veel niikaua, kuni ta juba elanud on. Vt. ka Talebi &ldquo;Antifragile&rdquo;, ta kirjutab sellest nähtusest pikemalt.</em></p>
+<p><em>Kui teravaid elamusi tahate, meenutage seda NFT-spetsialistidest AI-spetsialistideks kehastunutele. Või võtke Google Trends lahti ning vaadake &ldquo;NFT&rdquo; ja &ldquo;AI agent&rdquo; graafikuid.</em></p>
+<p><em>LLMid ei kao kuhugi, aga kogu selle agendimängu osas ma nii kindel poleks, see jõuab veel mitu korda muutuda, enne kui päriselt kasulikuks hakkab.</em></p>
+<hr>
+<p>Päris mitu vajalikku tükki on ka olemas:</p>
+<ul>
+<li><a href="https://e-gov.github.io/TARA-Doku/">TARA</a>. Hetkel on küll tegu OpenID Connecti identiteeditarnijaga, aga OAuth on selles mootoris sees, liiga suuri samme ei ole vaja astuda. Seejuures ei pea kasutama ju sedasama TARA, võib ka uue paigaldada.</li>
+<li>Standardne liidestus üle X-tee.</li>
+<li>Ja loomulikult kogu maailma agendi-ökosüsteem, mis ei pea mitte midagi Eesti-spetsiifilist lisama.</li>
+</ul>
+<p>Tehtagu.</p>
+<p>Aga palun projekteeritagu läbi. Kui ma kunagi varem arvasin, et OAuth on üks paljudest võimalustest, siis nüüd arvan ma, et kui tahta midagi sellist teha, siis peab olema OAuth kasutusel. Aga see ei käi nii, et võtame riiulist mingi FOSS monstrumist OAuth pinu, jookseme kuidagi käima ja hakkame kasutama. See värk tuleb läbi mõtleda, soovitavalt selliste inimeste osavõtul, kes on OAuthi standardeid mõttega lugenud ning ka mõnd koledat ämbrit lähedalt näinud.</p>
+<p>Aga igal juhul tundub see olevat see variant, kuidas saab agendile viisakalt õmmeldud korraliku kaelarihma anda.</p>
+<h2 id="variant-c-seesama-mis-eelmine-aga-seda-teeb-erasektor">Variant C: seesama mis eelmine, aga seda teeb erasektor</h2>
+<p>Ja nüüd küsimus, mis mind närib: miks on seda kõike vaja teha riigi sees? Et me saaks järgmise e-residentsuse, kus hoobeldakse riigilõivude koguse, mitte SKT osakaalu ega kapitali akumulatsiooni mahuga?</p>
+<p>Riigieelarve on miinuses, igasuguste riigistruktuuride personal paisub nagu pärmi peal ja nüüd hakkame veel üht asja riigi sees tegema? Seejuures veel teenust, mis on suunatud pigem riigist välja.</p>
+<p>Aga mis siis, kui joonistaks enne tehnilist arhitektuuri hoopis natuke äriarhitektuuri? Ja küsiks &ndash; kas seda kõike saaks teha <a href="https://marketplace.e-resident.gov.ee/service-providers/">eraettevõte või mitu</a>? Ilmselt on mingid asjad, mida peaks tegema ka riik - on need siis X-tee tehnilised muudatused, seadusandluse muudatused vms - aga seda oleks ilmselt suhteliselt vähe, võrreldes toore tehnilise tööga, mida võib sobivate raamide olemasolul teha ükskõik kes.</p>
+<p>Riigikapitalism ei tohiks mingil juhul eesmärk olla ning tark oleks hoida tehniline eksperimenteerimine e-riigi tuumikust eemal. Eksperimenteerige parem EHR-iga, see saab sellest ainult paremaks minna.</p>
+<p>E-residentsus ise on natuke teise kujuga nähtus, seal on endiselt vajalik, et selle jämedad otsad on PPA käes - aga praegu pole näha ühtegi head põhjust, miks just riigiaparaat peaks agentide liidestamise oma südameasjaks tegema.</p>
+<p>Ei oleks paremat tõestust massilise agendi-liidestamise idee headusest, kui see, et kellelgi õnnestub sellega kasumit teenida.</p>
+<h1 id="kokkuvõtteks">Kokkuvõtteks</h1>
+<p>Kui on mingi usk, et seda agendimängu tuleb mängida, tuleb käised üles käärida ja projekteerima hakata ning seejuures silmas pidada, misasi on täna levinud &ldquo;AI-agent&rdquo; ja kuidas ta maailma sööb.</p>
+<p>Tehtagu.</p>
+<p>Mina ei usu, et seda mängu tuleb mängida ja seetõttu tegema ei torma, aga kui kellelgi on selles osas mingeid detailsemaid küsimusi, on võimalik ilmselt viisil või teisel neile vastata.</p>
+<p>Küsimusi ja väiteid teemal &ldquo;see kõik on Reformierakonna valimiskampaania&rdquo; ignoreerin, isegi kui need küsimused tekivad mul endal. Eks see selgub 215 päeva pärast.</p>
+<h1 id="kartaago-tuleb-hävitada">Kartaago tuleb hävitada</h1>
+<p>Kui on üks asi, mis seisab Eesti ning insenertehnilistest lahendustest tuleneva jõukuse või et siis &ldquo;võimsa arengu&rdquo; vahel, on see meie põhikooli reaalainete-õpetuse täiesti kohutav seis.</p>
+<p>Ja ma pean silmas seda, et kõik peavad saama matas oma tulbad ära teha, pädeva õpetaja järelvalve all. Ja et keemias ei oleks probleeme, eriti arvestades seda, kuidas kogu ootus majanduskasvule kipub nihkuma IT-tilulilu pealt biokeemiale, materjaliteadusele ja muule.</p>
+<p>Et meil oleks see ühiskondlik põhi, mis peaks vastu, kui harimatud üritavad ennast peale suruda &ndash; ajalugu õpetab, et see kipub lolli järjekindlusega ikka juhtuma.</p>
+<p>Ükski lobarobot, videotund ega huviharidus seda ei kompenseeri. Eriti viimane on väga tarvilik, aga mitte piisav. Põhi peab olema lai ja tugev.</p>
+
+  </main>
+  <div id="disqus-container">
+  
+</div>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+  </script>
+
+          
+            <footer role="contentinfo">
+  <div
+  
+  >
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      
+      <span aria-hidden="true"></span>
+    </label>
+  </div>
+  
+    Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.
+  
+</footer>
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+  <script src="/js/custom_01.js"></script>
+
+  <script src="/js/custom_02.js"></script>
+
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+    
+  
+
+  </body>
+</html>

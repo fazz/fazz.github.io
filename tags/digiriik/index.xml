@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digiriik on The Happler</title>
+    <link>https://fazz.github.io/tags/digiriik/</link>
+    <description>Recent content in Digiriik on The Happler</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Oct 2026 16:00:00 +0300</lastBuildDate>
+    <atom:link href="https://fazz.github.io/tags/digiriik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teeme hästi suure digitaalidentiteedi mis on seest õõnes</title>
+      <link>https://fazz.github.io/posts/2026-10-tqqmq-sqqrq-digitqqlidentitqqdi/</link>
+      <pubDate>Fri, 09 Oct 2026 16:00:00 +0300</pubDate>
+      <guid>https://fazz.github.io/posts/2026-10-tqqmq-sqqrq-digitqqlidentitqqdi/</guid>
+      <description>Andsin parasjagu Tartu Ülikoolis tudengitele identiteedi-teemalist loengut, kui kõik mu seadmed hakkasid korraga vilkuma, ulguma ja verist vahutavat digitaalidentiteeti välja ajama. Selgus, et zeitungis oli avaldatud uudis selle kohta, et MKM on saatnud kooskõlastusringile &amp;ldquo;AI agentide isikukoodide&amp;rdquo; seaduseelnõu (EIS toimik 26-1105). Jälle päev tuksis, sest korraliku kodaniku kohus on selline eelnõu alati läbi lugeda, tihkelt puid alla panna ja kogu lugu bensiiniga üle valada.&#xA;Lugesin läbi ja hakkasin naerma. Lihtsalt selle pärast, et nooremallohvitser ei nuta kunagi.</description>
+    </item>
+    <item>
+      <title>LHV tegi oma klientidele avaliku JSON-RPC 2.0 API</title>
+      <link>https://fazz.github.io/posts/2026-08-lhv-tegi-avaliku-api/</link>
+      <pubDate>Mon, 03 Aug 2026 07:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/2026-08-lhv-tegi-avaliku-api/</guid>
+      <description>Sissejuhatus LHV käivitas 15. juulil oma klientidele, sh eraklientidele, avaliku JSON-RPC 2.0 API.&#xA;Esimesed internetipangad ehitati Eestis 1996. aastal, ehk siis võttis 30 aastat, et jõuda brauseri-põhisest eraisikute internetipangast API-põhise eraisikute internetipangani, seda hoolimata sellest, et meie rahvusliku IT omamüüdiks on lõputu internetilembus ning programmeerivad lasteaialapsed.&#xA;Ah et miks te sellest API-st midagi kuulnud ei ole? Sest pressiteade ütleb midagi muud, pressiteade ütleb, et &amp;ldquo;LHV pakub nüüd esimese pangana Eestis enda klientidele võimalust ühendada pangakonto tehisintellekti tööriistadega.</description>
+    </item>
+    <item>
+      <title>Agentide identifitseerimisest, detailselt, olulist</title>
+      <link>https://fazz.github.io/posts/2026-07-agentide-identifitseerimine/</link>
+      <pubDate>Thu, 16 Jul 2026 07:00:00 +0200</pubDate>
+      <guid>https://fazz.github.io/posts/2026-07-agentide-identifitseerimine/</guid>
+      <description>Sissejuhatus Lauale on pandud ettepanek, mille põhijoon on: anname inimeste isiklikele AI-agentidele isikukoodid. On eeldus, et see võimaldab meil ühiskonnana teha mingeid asju, mida pole olnud seni võimalik teha ning seeläbi kõvasti oma elujärge parandada. Plaani koostajad on oma plaani headuses sedavõrd kindlad, et lasksid Eesti Vabariigi peaministril selle esimesena, enne tegelikke autoreid, ette kanda (17.06.26 hommikupooliku teadetes).&#xA;Sellel ettepanekul on paraku üks suur probleem, nimelt näeb ta välja üldjoontes selline:</description>
+    </item>
+  </channel>
+</rss>
